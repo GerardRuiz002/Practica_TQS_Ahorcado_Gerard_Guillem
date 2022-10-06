@@ -1,0 +1,30 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+Main --> Ahorcado
+
+class Jugador {
+    -idJugador : int
+    -nomJugador : String
+    +Jugador(idJugador: int, nomJugador : String)
+    +getIdJugador()
+}
+
+class ParaulesDisponibles {
+    paraules : arrayList<String>
+    llegirTxt() : void
+}
+
+class Ahorcado {
+    -numJugadors : int
+    -tornJugador : int
+    -paraulaMisteriosa : String
+    +showParaulesDisponibles() : void
+    +verificarParaula() : boolean
+    +setParaulaMisteriosa()
+}
+
+class Main {
+    iniciarJoc() : void
+}
+@enduml
