@@ -2,6 +2,8 @@
 skinparam classAttributeIconSize 0
 
 Main --> Ahorcado
+Jugador --> Ahorcado
+Dibuixar --> Ahorcado
 
 class Jugador {
     -idJugador : int
@@ -18,10 +20,20 @@ class ParaulesDisponibles {
 class Ahorcado {
     -numJugadors : int
     -tornJugador : int
+    -videsDisponibles
     -paraulaMisteriosa : String
-    +showParaulesDisponibles() : void
-    +verificarParaula() : boolean
-    +setParaulaMisteriosa()
+    -lletresUtilitzades[] : char
+    -lletresDisponibles[] : char
+    -nivellDificultat : int
+    +Ahoracado(numJugadors : int, nivellDificultat : int)
+}
+
+class Dibuixar {
+-dibuixDelMoment
+-paraulaMisteriosa
+-carcatersAMostrar[] : char
++dibuixarAhoracado() : void
++dibuixarParaulaMisteriosa() : void
 }
 
 class Main {
