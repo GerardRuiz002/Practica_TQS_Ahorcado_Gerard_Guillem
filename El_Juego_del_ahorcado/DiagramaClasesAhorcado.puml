@@ -26,6 +26,7 @@ class Ahorcado {
     -lletresDisponibles[] : char
     -nivellDificultat : int
     +Ahoracado(numJugadors : int, nivellDificultat : int)
+    -inicialitzaLletresDisponibles();
 }
 
 class Dibuixar {
@@ -38,5 +39,10 @@ class Dibuixar {
 
 class Main {
     iniciarJoc() : void
+}
+
+class Ranking {
+    -puntuacioJugadorN
+    +mostrarRanking()
 }
 @enduml
