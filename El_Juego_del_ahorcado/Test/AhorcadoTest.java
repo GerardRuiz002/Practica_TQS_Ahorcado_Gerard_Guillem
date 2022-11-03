@@ -55,14 +55,18 @@ public class AhorcadoTest {
         int resultatEsperatAlt = 3;
         assertEquals(resultatEsperatAlt, paraulaMistAlt.getNivellDificultat());
 
-
     }
 
     @Test
     public  void comprovaLletra(){
         //Test comprovar que ens passen una lletra i no un altre caracter:
+        Ahorcado paraulaMisteriosa = new Ahorcado(0,1);
+        int tesIntegerChar = '2';
+        char testChar = 'c';
+        paraulaMisteriosa.comprovaLletra(testIntegerChar);
 
 
-
+        /*assert(type(a) == int)
+    assert(type(b) == int)*/
     };
 }

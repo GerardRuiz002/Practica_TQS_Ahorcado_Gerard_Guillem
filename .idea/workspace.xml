@@ -31,7 +31,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/gerar/Documents/GitHub/Practica_TQS_Ahorcado"
+    "last_opened_file_path": "C:/Users/gerar/Documents/GitHub/Practica_TQS_Ahorcado/El_Juego_del_ahorcado"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -43,6 +43,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665056564454</updated>
       <workItem from="1665056566147" duration="555000" />
+      <workItem from="1667472971850" duration="55000" />
     </task>
     <servers />
   </component>

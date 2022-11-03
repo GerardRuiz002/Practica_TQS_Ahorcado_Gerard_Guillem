@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d52aad4-6c3d-411b-bfd0-0be4b3622389" name="Changes" comment="" />
-    <list id="4c3ddce4-3142-49cf-abd5-d87880d97a86" name="Changes by guill" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +38,7 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "last_opened_file_path": "C:/Users/gerar/Desktop/Practica_DS",
+    "last_opened_file_path": "C:/Users/gerar/Documents/GitHub/Practica_TQS_Ahorcado/El_Juego_del_ahorcado",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -108,6 +107,7 @@
       <workItem from="1666866726888" duration="831000" />
       <workItem from="1666867887381" duration="4506000" />
       <workItem from="1666953394659" duration="92000" />
+      <workItem from="1667473028771" duration="1763000" />
     </task>
     <servers />
   </component>

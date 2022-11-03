@@ -7,6 +7,7 @@ public class Ahorcado {
     private int videsDisponibles;
 
     private String paraulaMisteriosa;
+    private char paraulaMisteriosaArray[];
 
     private int midaParaulaMisteriosa;
     private char espaisDesxifrats[]; //Espais de la paraula que han sigut desxifrats (______) || (A_____) || (A____B)
@@ -58,23 +59,26 @@ public class Ahorcado {
             this.midaParaulaMisteriosa = 10;
     }
 
-
-
-
     //Comprova si la lletra introduida per l'usuari forma part de la paraula misteriosa. La afegeix, o resta vida.
     public void comprovaLletra(char lletra){
         boolean trobada = false;
         int i = 0;
         while(!trobada && i < this.paraulaMisteriosa.length()){
-            if(this.espaisDesxifrats[i] == lletra) { //si troba lletra cridem al escriu lletra.
-                escriuLletra(lletra);
+            if(this.paraulaMisteriosaArray[i] == lletra) { //si troba lletra cridem al escriu lletra.
+                escriuLletra(lletra, i);
                 trobada = true;
             }
             i++;
         }
-        if(i == this.paraulaMisteriosa.length())
+        if(i == this.paraulaMisteriosa.length()-1)
             this.videsDisponibles -= 1;
     }
+
+    //escriu la lletra que ha encertat l'usuari en la posició que li correspon.
+    public void escriuLletra(char lletra, int pos){
+        espaisDesxifrats[pos] = lletra;
+    }
+
 }
 
 /*5,7,10*/
