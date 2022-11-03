@@ -1,5 +1,10 @@
+package Controlador;
+
 import java.util.*;
 import java.io.*;
+import java.util.Arrays;
+
+
 
 public class Ahorcado {
     private int nJugadors;
@@ -17,8 +22,8 @@ public class Ahorcado {
 
     private int nivellDificultat; //Baix = 5 lletres | Mig = 7 lletres | Alt = 10 lletres
     //Getters
-    public char[] getLLetresDisponibles() { return this.lletresDisponibles; }
-    public char[] getEspaisDesxifrats() {return this.espaisDesxifrats; }
+    public char[] getLLetresDisponibles() { return this.lletresDisponibles;}
+    public char[] getEspaisDesxifrats() {return this.espaisDesxifrats;}
     public int getNivellDificultat(){return this.nivellDificultat;}
 
 
@@ -59,26 +64,43 @@ public class Ahorcado {
             this.midaParaulaMisteriosa = 10;
     }
 
-    //Comprova si la lletra introduida per l'usuari forma part de la paraula misteriosa. La afegeix, o resta vida.
-    public void comprovaLletra(char lletra){
-        boolean trobada = false;
-        int i = 0;
-        while(!trobada && i < this.paraulaMisteriosa.length()){
-            if(this.paraulaMisteriosaArray[i] == lletra) { //si troba lletra cridem al escriu lletra.
-                escriuLletra(lletra, i);
-                trobada = true;
+    //Comprova si la lletra introduida per l'usuari forma part de la paraula misteriosa. L'afegeix, o resta vida.
+    public int comprovaLletra(char lletra){
+        if((int)lletra >= 97 && (int)lletra <= 122) { //ASCII
+            boolean trobada = false;
+            int i = 0;
+            while (!trobada && i < this.paraulaMisteriosa.length()) {
+                if (this.paraulaMisteriosaArray[i] == lletra) { //si troba lletra cridem al escriu lletra.
+                    escriuLletra(lletra, i);
+                    trobada = true;
+                }
+                i++;
             }
-            i++;
+            if (i == this.paraulaMisteriosa.length() - 1)
+                this.videsDisponibles -= 1; //restem vida si la lletra no es dins la paraula
+            return 0;
+        }else{
+            System.out.println("Caràcter no valid. Introdueix únicament lletres majuscules.");
+            return -1;
         }
-        if(i == this.paraulaMisteriosa.length()-1)
-            this.videsDisponibles -= 1;
     }
 
     //escriu la lletra que ha encertat l'usuari en la posició que li correspon.
     public void escriuLletra(char lletra, int pos){
         espaisDesxifrats[pos] = lletra;
+        int i = 0;
+        boolean trobat = false;
+        while(i < 26 && !trobat){
+            if(lletresDisponibles[i] == lletra){
+               lletresDisponibles[i] = '0';
+               trobat = true;
+            }
+            ++i;
+        }
     }
 
 }
+
+//toCharArray();
 
 /*5,7,10*/

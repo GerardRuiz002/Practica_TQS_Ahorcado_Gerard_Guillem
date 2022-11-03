@@ -1,3 +1,4 @@
+import Controlador.Ahorcado;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -58,14 +59,25 @@ public class AhorcadoTest {
     }
 
     @Test
-    public  void comprovaLletra(){
+    public  void comprovaLletra(){ //CREAR UN MOCKOBJECT
         //Test comprovar que ens passen una lletra i no un altre caracter:
         Ahorcado paraulaMisteriosa = new Ahorcado(0,1);
-        int tesIntegerChar = '2';
+
         char testChar = 'c';
-        paraulaMisteriosa.comprovaLletra(testIntegerChar);
+        int resultatEsperat1 = 0;
+
+        char tesIntegerChar = '2';
+        int resultatEsperat2 = -1;
+
+        int valorRealCorrecte1 =  paraulaMisteriosa.comprovaLletra(testChar);
+        int calorRealIncorrecte2 =  paraulaMisteriosa.comprovaLletra(tesIntegerChar);
+
+        assertEquals(resultatEsperat1, valorRealCorrecte1);
+        assertEquals(resultatEsperat2, calorRealIncorrecte2);
 
 
+
+/*97-122*/
         /*assert(type(a) == int)
     assert(type(b) == int)*/
     };
