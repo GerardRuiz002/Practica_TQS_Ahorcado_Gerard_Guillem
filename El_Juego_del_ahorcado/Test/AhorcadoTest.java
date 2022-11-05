@@ -20,21 +20,21 @@ public class AhorcadoTest {
         //Test de inicialització amb dificultat fàcil (5 lletres) //Valor limit inferior
         Ahorcado paraulaMistBaix = new Ahorcado(0,1);
         paraulaMistBaix.generarEspaisParaulaMisteriosa();
-        char resultatBaix[] = paraulaMistBaix.getEspaisDesxifrats();
+        char resultatBaix[] = paraulaMistBaix.getEspaisDesxifratsArrayChar();
         char resultatEsperatBaix[] = {'_','_','_','_','_'};
         assertArrayEquals(resultatEsperatBaix, resultatBaix);
 
         //Test de inicialització amb dificultat mitja (7 lletres)
         Ahorcado paraulaMistMig = new Ahorcado(0,2);
         paraulaMistMig.generarEspaisParaulaMisteriosa();
-        char resultatMig[] = paraulaMistMig.getEspaisDesxifrats();
+        char resultatMig[] = paraulaMistMig.getEspaisDesxifratsArrayChar();
         char resultatEsperatMig[] = {'_','_','_','_','_','_','_'};
         assertArrayEquals(resultatEsperatMig, resultatMig);
 
         //Test de inicialització amb dificultat alta (10 lletres) //Valor limit superior
         Ahorcado paraulaMistAlt = new Ahorcado(0,3);
         paraulaMistAlt.generarEspaisParaulaMisteriosa();
-        char resultatAlt[] = paraulaMistAlt.getEspaisDesxifrats();
+        char resultatAlt[] = paraulaMistAlt.getEspaisDesxifratsArrayChar();
         char resultatEsperatAlt[] = {'_','_','_','_','_','_','_','_','_','_'};
         assertArrayEquals(resultatEsperatAlt, resultatAlt);
     }
@@ -69,8 +69,8 @@ public class AhorcadoTest {
         char tesIntegerChar = '2';
         int resultatEsperat2 = -1;
 
-        int valorRealCorrecte1 =  paraulaMisteriosa.comprovaLletra(testChar);
-        int calorRealIncorrecte2 =  paraulaMisteriosa.comprovaLletra(tesIntegerChar);
+        int valorRealCorrecte1 =  paraulaMisteriosa.introduirLletra(testChar);
+        int calorRealIncorrecte2 =  paraulaMisteriosa.introduirLletra(tesIntegerChar);
 
         assertEquals(resultatEsperat1, valorRealCorrecte1);
         assertEquals(resultatEsperat2, calorRealIncorrecte2);
