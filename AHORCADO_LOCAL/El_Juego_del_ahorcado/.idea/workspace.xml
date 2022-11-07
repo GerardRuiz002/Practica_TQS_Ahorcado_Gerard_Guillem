@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d52aad4-6c3d-411b-bfd0-0be4b3622389" name="Changes" comment="" />
+    <list default="true" id="2d52aad4-6c3d-411b-bfd0-0be4b3622389" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/Test/AhorcadoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/Test/AhorcadoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/out/production/El_Juego_del_ahorcado/Controlador/Ahorcado.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/out/production/El_Juego_del_ahorcado/Controlador/Ahorcado.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/out/production/El_Juego_del_ahorcado/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/out/production/El_Juego_del_ahorcado/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/out/production/El_Juego_del_ahorcado/Text/dificil.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/out/production/El_Juego_del_ahorcado/Text/dificil.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/out/production/El_Juego_del_ahorcado/Text/facil.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/out/production/El_Juego_del_ahorcado/Text/facil.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/out/production/El_Juego_del_ahorcado/Text/normal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/out/production/El_Juego_del_ahorcado/Text/normal.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/out/production/El_Juego_del_ahorcado/Vista/Dibuixar.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/out/production/El_Juego_del_ahorcado/Vista/Dibuixar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/out/test/El_Juego_del_ahorcado/AhorcadoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/out/test/El_Juego_del_ahorcado/AhorcadoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/src/Controlador/Ahorcado.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/src/Controlador/Ahorcado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/src/Text/dificil.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/src/Text/dificil.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/src/Text/facil.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/src/Text/facil.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/src/Text/normal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/src/Text/normal.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/src/Vista/Dibuixar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../El_Juego_del_ahorcado/src/Vista/Dibuixar.java" afterDir="false" />
+    </list>
     <list id="93eb15e3-0422-48c1-965f-ec03f34fd0cd" name="Changes by guill" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +33,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -28,9 +44,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/gerar/OneDrive/Escritorio/Practica_TQS_Ahorcado_Gerard_Guillem/AHORCADO_LOCAL/El_Juego_del_ahorcado"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -121,6 +140,7 @@
       <workItem from="1667473028771" duration="1774000" />
       <workItem from="1667475281233" duration="4675000" />
       <workItem from="1667659271934" duration="9632000" />
+      <workItem from="1667851621493" duration="193000" />
     </task>
     <servers />
   </component>

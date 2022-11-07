@@ -7,8 +7,9 @@ import java.io.*;
 import java.util.Arrays;
 
 public class Ahorcado {
+    public boolean errorCreation; //Serà true en el cas de que s'hagi introduït malament la dificultat i el numero de jugadors
     private Dibuixar vista = new Dibuixar();
-    private int nJugadors;
+    private int nJugadors; //minim 1 jugador, maxim 4 jugadors
     private int tornJugadorId;
     private int videsDisponibles;
 
@@ -23,25 +24,31 @@ public class Ahorcado {
     private int nivellDificultat; //Baix = 5 lletres | Mig = 7 lletres | Alt = 10 lletres
 
     public Ahorcado(int numJugadors, int nivellDificultat) {
-        this.nJugadors = numJugadors;
-        this.nivellDificultat = nivellDificultat;
+        if (((numJugadors > 0) && (numJugadors < 5) && (nivellDificultat > 0) && (nivellDificultat < 4))) {
+            this.nJugadors = numJugadors;
+            this.nivellDificultat = nivellDificultat;
 
-        //Inicialitzem amb les lletres de l'abecedari:
-        //  .Aquí omplim els espais de lletresDisponibles amb les lletres de l'abecedari sense la ñ, que e suna lletra que no podrem utilitzar).
-        this.lletresDisponibles = new char[26];
-        this.inicialitzaLletresDisponibles();
+            //Inicialitzem amb les lletres de l'abecedari:
+            //  .Aquí omplim els espais de lletresDisponibles amb les lletres de l'abecedari sense la ñ, que e suna lletra que no podrem utilitzar).
+            this.lletresDisponibles = new char[26];
+            this.inicialitzaLletresDisponibles();
 
-        //Inicialitzem nivell de dificultat:
-        //  .Aquí es genera el nombre d'espais de la paraula misteriosa).
-        this.generarMidaParaulaMisteriosa(nivellDificultat);
+            //Inicialitzem nivell de dificultat:
+            //  .Aquí es genera el nombre d'espais de la paraula misteriosa).
+            this.generarMidaParaulaMisteriosa(nivellDificultat);
 
-        //Inicialitzem vides de la partida (segons el nivell de dificultat)
-        this.generarVidesPartida(nivellDificultat);
+            //Inicialitzem vides de la partida (segons el nivell de dificultat)
+            this.generarVidesPartida(nivellDificultat);
 
-        //Incialitzem els espaisDesxifrats (inicialment sera tot ______):
-        //  .Aquí es generen els espais ______.
-        this.espaisDesxifrats = new char[midaParaulaMisteriosa];
-        this.generarEspaisParaulaMisteriosa();
+            //Incialitzem els espaisDesxifrats (inicialment sera tot ______):
+            //  .Aquí es generen els espais ______.
+            this.espaisDesxifrats = new char[midaParaulaMisteriosa];
+            this.generarEspaisParaulaMisteriosa();
+
+            this.errorCreation = false;
+        }
+        else
+            this.errorCreation = true;
     }
 
     //Getters
@@ -50,6 +57,7 @@ public class Ahorcado {
     public String getEspaisDesxifrats() { return new String(this.espaisDesxifrats); }
     public int getNivellDificultat() { return this.nivellDificultat; }
     public int getVidesDisponibles() { return this.videsDisponibles; }
+    public char[] getParaulaMisteriosaArray() { return  this.paraulaMisteriosaArray; }
 
     //Inicialitza les lletres disponibles a escollir (amb l'abecedari sense ñ)
     public void inicialitzaLletresDisponibles() {
@@ -82,13 +90,49 @@ public class Ahorcado {
             videsDisponibles = 3;
     }
 
-    //FALTA GENERAR LA PALABRA ALEATORIAMENTE LEYENDO DEL ARCHIVO TXT SEGUN LA DIFICULTAD
-    public void generarParaula() { //harcodeado
-        this.paraulaMisteriosa = "RATON";
-        this.paraulaMisteriosaArray = paraulaMisteriosa.toCharArray();
+    //Introdueix una paraula a la paraula misteriosa
+    public int introduirParaula(String paraula) {
+        char [] paraulaArray  = paraula.toCharArray();
+
+        boolean lletraMinuscula = false;
+        int i = 0;
+        while((i < paraula.length()) && !lletraMinuscula) {
+            if (paraulaArray[i] < 'A' || paraulaArray[i] > 'Z')
+                lletraMinuscula = true;
+            else
+                i++;
+        }
+
+        if (lletraMinuscula == true) {
+            vista.errorCaracterNoValid();
+            return -1;
+        }
+        else {
+            this.paraulaMisteriosa = paraula;
+            this.paraulaMisteriosaArray = paraulaArray;
+            return 0;
+        }
     }
 
     //Comprova si la lletra introduida per l'usuari forma part de la paraula misteriosa. L'afegeix, o resta vida.
+    public boolean comprovaLletraCorrecta(char lletra) {
+        if ((lletra >= 65) && (lletra <= 90))
+            return true;
+        else
+            return false;
+    }
+
+    public boolean comprovaCaracterNoUtilitzat(char caracter) {
+        boolean caracterNoUtilitzat = false;
+        for (int i = 0; i < lletresDisponibles.length; i++) {
+            if (lletresDisponibles[i] == caracter) {
+                caracterNoUtilitzat = true;
+            }
+        }
+
+        return caracterNoUtilitzat;
+    }
+
     public int introduirLletra(char lletra) {
         boolean caracterNoUtilitzat = false;
         for (int i = 0; i < lletresDisponibles.length; i++) {
@@ -109,6 +153,7 @@ public class Ahorcado {
                     //Eliminem lletra de lletres disponibles perquè l'usuari no pugui tornar-la a utilitzar-la
                     eliminaLletraDisponible(lletra);
                     trobada = true;
+                    comprovaEstatPartida(); //nou
                 } else
                     i++;
             }
@@ -120,16 +165,22 @@ public class Ahorcado {
 
                 //Notifiquem que la lletra no es dins de la paraula
                 vista.errorLletraNoValida();
+                comprovaEstatPartida(); //nou
             }
 
             return 0;
         } else {
             //Cridem els dos tipus d'errors que pot haver-hi al introduir un caràcter
-            if (caracterNoUtilitzat == false)
+            if (caracterNoUtilitzat == false){
+                videsDisponibles -= 1;
                 vista.errorLletraUtilitzada();
-            else
+                comprovaEstatPartida(); //nou
+            }
+            else{
+                videsDisponibles -= 1;
                 vista.errorCaracterNoValid();
-
+                comprovaEstatPartida(); //nou
+            }
             return -1;
         }
     }

@@ -5,22 +5,15 @@ public class Dibuixar {
         System.out.println(videsDisponibles);
     }
 
-    public void errorCaracterNoValid() {
-        System.out.println("Caràcter no valid. Introdueix únicament lletres majuscules.");
-    }
-
+    public void errorCaracterNoValid() { System.out.println("Caràcter no valid. Introdueix únicament lletres majúscules."); }
     public void errorLletraUtilitzada() {
         System.out.println("Aquesta lletra ja ha estat utilitzada.");
     }
-
-    public void errorLletraNoValida() {
-        System.out.println("Aquesta lletra no correspon a cap lletra de la paraula misteriosa.");
-    }
+    public void errorLletraNoValida() { System.out.println("Aquesta lletra no correspon a cap lletra de la paraula misteriosa."); }
 
     public void perdedor() {
         System.out.println("S'han acabat les vides, partida perduda.");
     }
-
     public void guanyador(int idJugador){
         System.out.println("El guanyador és: " + idJugador + ".");
     }
