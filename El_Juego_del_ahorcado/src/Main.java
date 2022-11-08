@@ -3,8 +3,13 @@ import Model.ParaulesDisponibles;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
+    public static void main(String args[]) throws IOException {
+        provaScanner();
+    }
+
     public void provaAhorcado() {
         //Declarem el ahorcado
         Ahorcado prova = new Ahorcado(1, 1);
@@ -56,16 +61,53 @@ public class Main {
         //**************************************************************************
     }
 
-    public static ArrayList<String> porvaLecturaArxiu() throws IOException {
+    public static ArrayList<String> provaLecturaArxiu() throws IOException {
         ParaulesDisponibles pd = new ParaulesDisponibles();
         ArrayList<String> paraules =  pd.llegirTxt("src/Text/facil.txt");
         return paraules;
     }
 
-    public static void main(String[] args) throws IOException {
-        ArrayList<String> lectura = porvaLecturaArxiu();
+    public static void provaScanner(){
+        Scanner sc = new Scanner(System.in);
 
+        String name = sc.nextLine();
+        // get users name
+
+        int age = sc.nextInt();
+        // get users age*/
     }
+
+    public void inicialitzacióJoc() {
+        boolean fiPartida = false;
+        Scanner sc = new Scanner(System.in);
+        int nJugadors = 0;
+        int dificultat = 0;
+
+        //Inicialitzar ahorcado
+        boolean inicialitzacioCorrecta = false;
+        while (!inicialitzacioCorrecta) {
+            //Aqui hay que hacer el input por consola
+
+            Ahorcado ahorcado = new Ahorcado(1,1);
+            if (ahorcado.errorCreation == true) {
+                ahorcado = null;
+            }
+            else if (ahorcado.errorCreation == false) {
+                inicialitzacioCorrecta = true;
+            }
+        }
+
+        while (!fiPartida) {
+
+        }
+
+        boolean fiJoc = false;
+        while (!fiJoc) {
+
+        }
+    }
+
+
 
 
 

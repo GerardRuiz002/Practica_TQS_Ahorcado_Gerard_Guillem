@@ -47,8 +47,14 @@ public class Ahorcado {
 
             this.errorCreation = false;
         }
-        else
+        else {
             this.errorCreation = true;
+            if (numJugadors > 4 || numJugadors < 1)
+                vista.errorNombreJugadors();
+
+            if (nivellDificultat > 3 || nivellDificultat < 1)
+                vista.errorDificultat();
+        }
     }
 
     //Getters

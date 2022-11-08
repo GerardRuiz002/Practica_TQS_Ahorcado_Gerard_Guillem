@@ -11,6 +11,9 @@ public class Dibuixar {
     }
     public void errorLletraNoValida() { System.out.println("Aquesta lletra no correspon a cap lletra de la paraula misteriosa."); }
 
+    public void errorNombreJugadors() { System.out.println("El número de jugador ha de ser minim 1 i màxim 4."); }
+    public void errorDificultat() { System.out.println("La dificultat ha de ser com a minim 1 i com a màxim 3"); }
+
     public void perdedor() {
         System.out.println("S'han acabat les vides, partida perduda.");
     }
