@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d52aad4-6c3d-411b-bfd0-0be4b3622389" name="Changes" comment="" />
-    <list id="93eb15e3-0422-48c1-965f-ec03f34fd0cd" name="Changes by guill" comment="" />
+    <list default="true" id="2d52aad4-6c3d-411b-bfd0-0be4b3622389" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/AhorcadoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/AhorcadoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controlador/Ahorcado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controlador/Ahorcado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/ParaulesDisponibles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ParaulesDisponibles.java" afterDir="false" />
+    </list>
+    <list id="93eb15e3-0422-48c1-965f-ec03f34fd0cd" name="Changes by guill" comment="">
+      <change beforePath="$PROJECT_DIR$/Test/AhorcadoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/AhorcadoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controlador/Ahorcado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controlador/Ahorcado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vista/Dibuixar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vista/Dibuixar.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +29,61 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/Main.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="3" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="4" end1="4" start2="5" end2="6" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="9" end1="10" start2="11" end2="12" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="64" end1="65" start2="66" end2="67" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="70" end1="77" start2="72" end2="76" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="79" end1="80" start2="78" end2="85" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="85" end1="85" start2="90" end2="92" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="86" end1="86" start2="93" end2="94" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="88" end1="89" start2="96" end2="103" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="90" end1="91" start2="104" end2="107" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="98" end1="98" start2="114" end2="121" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="99" end1="100" start2="122" end2="123" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="101" end1="101" start2="124" end2="146" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="103" end1="107" start2="148" end2="148" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/Test/AhorcadoTest.java">
+      <ranges>
+        <range start1="109" end1="110" start2="109" end2="110" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="115" end1="116" start2="115" end2="116" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="124" end1="125" start2="124" end2="125" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="132" end1="133" start2="132" end2="133" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="140" end1="141" start2="140" end2="141" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="204" end1="206" start2="204" end2="207" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="207" end1="208" start2="208" end2="211" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="209" end1="209" start2="212" end2="273" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="211" end1="211" start2="275" end2="323" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="228" end1="230" start2="340" end2="340" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="235" end1="235" start2="345" end2="351" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Controlador/Ahorcado.java">
+      <ranges>
+        <range start1="98" end1="100" start2="98" end2="100" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="102" end1="102" start2="102" end2="103" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="137" end1="138" start2="138" end2="138" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="141" end1="141" start2="141" end2="155" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="150" end1="151" start2="164" end2="165" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="161" end1="162" start2="175" end2="175" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="173" end1="174" start2="186" end2="186" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="175" end1="176" start2="187" end2="187" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="177" end1="177" start2="188" end2="189" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="179" end1="181" start2="191" end2="192" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="182" end1="186" start2="193" end2="194" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="187" end1="189" start2="195" end2="197" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="217" end1="218" start2="225" end2="227" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="220" end1="221" start2="229" end2="232" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="230" end1="231" start2="241" end2="242" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="232" end1="240" start2="243" end2="247" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -60,7 +126,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="El_Juego_del_ahorcado" />
@@ -78,21 +144,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AhorcadoTest.numJugadors" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="El_Juego_del_ahorcado" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AhorcadoTest" />
-      <option name="METHOD_NAME" value="numJugadors" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AhorcadoTest.testComprovaLletraCorrecta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="El_Juego_del_ahorcado" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AhorcadoTest" />
       <option name="METHOD_NAME" value="testComprovaLletraCorrecta" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AhorcadoTest.testIntroduirLletra" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="El_Juego_del_ahorcado" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AhorcadoTest" />
+      <option name="METHOD_NAME" value="testIntroduirLletra" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -110,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AhorcadoTest.testIntroduirParaula" />
+        <item itemvalue="JUnit.AhorcadoTest.testIntroduirLletra" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AhorcadoTest.testComprovaLletraCorrecta" />
         <item itemvalue="JUnit.AhorcadoTest.introduirLletra" />
-        <item itemvalue="JUnit.AhorcadoTest.numJugadors" />
       </list>
     </recent_temporary>
   </component>
@@ -154,5 +220,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="ahorcado" language="JAVA" />
+        <watch expression="paraulaMisteriosa" language="JAVA" />
+        <watch expression="paraula" language="JAVA" />
+        <watch expression="paraulaMisteriosa" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

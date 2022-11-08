@@ -96,10 +96,11 @@ public class Ahorcado {
             videsDisponibles = 3;
     }
 
-    //Introdueix una paraula a la paraula misteriosa
-    public int introduirParaula(String paraula) {
+    //Introdueix una paraula a la paraula misteriosa, es a dir, que introdueix la paraula a introduir
+    public int assignarParaulaMisteriosa(String paraula) {
         char [] paraulaArray  = paraula.toCharArray();
 
+        //Comprovació de que la paraula misteriosa esta en majuscula
         boolean lletraMinuscula = false;
         int i = 0;
         while((i < paraula.length()) && !lletraMinuscula) {
@@ -135,8 +136,21 @@ public class Ahorcado {
                 caracterNoUtilitzat = true;
             }
         }
-
         return caracterNoUtilitzat;
+    }
+
+    public boolean introduirParaula(String paraula) {
+        boolean paraulaEncertada = false;
+        if (paraula.equals(paraulaMisteriosa)) {
+            vista.guanyador(tornJugadorId);
+            paraulaEncertada = true;
+            return paraulaEncertada;
+        }
+        else {
+            vista.errorParaulaNoCorrecta(paraula);
+            videsDisponibles -= 1;
+            return paraulaEncertada;
+        }
     }
 
     public int introduirLletra(char lletra) {
@@ -148,7 +162,7 @@ public class Ahorcado {
         }
 
         //Comprova el ASCII
-        if ((lletra >= 65) && (lletra <= 90) && caracterNoUtilitzat) {
+        if (comprovaLletraCorrecta(lletra)) {
             int i = 0;
             boolean trobada = false;
             while (!trobada && i < paraulaMisteriosa.length()) {
@@ -159,7 +173,6 @@ public class Ahorcado {
                     //Eliminem lletra de lletres disponibles perquè l'usuari no pugui tornar-la a utilitzar-la
                     eliminaLletraDisponible(lletra);
                     trobada = true;
-                    comprovaEstatPartida(); //nou
                 } else
                     i++;
             }
@@ -171,22 +184,17 @@ public class Ahorcado {
 
                 //Notifiquem que la lletra no es dins de la paraula
                 vista.errorLletraNoValida();
-                comprovaEstatPartida(); //nou
             }
-
             return 0;
+
         } else {
             //Cridem els dos tipus d'errors que pot haver-hi al introduir un caràcter
-            if (caracterNoUtilitzat == false){
-                videsDisponibles -= 1;
+            if (caracterNoUtilitzat == false)
                 vista.errorLletraUtilitzada();
-                comprovaEstatPartida(); //nou
-            }
-            else{
-                videsDisponibles -= 1;
+            else
                 vista.errorCaracterNoValid();
-                comprovaEstatPartida(); //nou
-            }
+
+            videsDisponibles -= 1;
             return -1;
         }
     }
@@ -215,10 +223,13 @@ public class Ahorcado {
         }
     }
 
-    public void comprovaEstatPartida() {
+    public Boolean comprovaEstatPartida() { //nomes es cridara si escullim l opcio introduir lletra --> comprova que la paraula s'hagi completat al introduir una lletra.
+        boolean partidaFinalitzada = false;
         if(videsDisponibles == 0){
             vista.perdedor();
-        } else if (videsDisponibles != 0) {
+            partidaFinalitzada = true;
+            return partidaFinalitzada;
+        } else{
             boolean paraulaNoCompleta = false;
             int i = 0;
             while ((!paraulaNoCompleta) && (i < paraulaMisteriosa.length())) {
@@ -228,16 +239,12 @@ public class Ahorcado {
                     i++;
             }
 
-            if (paraulaNoCompleta == false)
+            if (paraulaNoCompleta == false){
                 vista.guanyador(tornJugadorId);
+                partidaFinalitzada = true;
+            }
+            return partidaFinalitzada;
         }
-    }
-
-    public int comprovarParaulaIntroduida(String paraula) {
-        if (paraula == paraulaMisteriosa)
-            return 0;
-        else
-            return -1;
     }
 }
 

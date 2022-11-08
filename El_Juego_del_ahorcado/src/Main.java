@@ -1,13 +1,15 @@
 import Controlador.Ahorcado;
 import Model.ParaulesDisponibles;
+import Vista.Dibuixar;
 
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String args[]) throws IOException {
-        provaScanner();
+        inicialitzacióJoc();
     }
 
     public void provaAhorcado() {
@@ -62,33 +64,47 @@ public class Main {
     }
 
     public static ArrayList<String> provaLecturaArxiu() throws IOException {
-        ParaulesDisponibles pd = new ParaulesDisponibles();
+        ParaulesDisponibles pd = new ParaulesDisponibles(1);
         ArrayList<String> paraules =  pd.llegirTxt("src/Text/facil.txt");
         return paraules;
     }
 
     public static void provaScanner(){
-        Scanner sc = new Scanner(System.in);
-
-        String name = sc.nextLine();
-        // get users name
-
-        int age = sc.nextInt();
-        // get users age*/
+        Scanner capt = new Scanner(System.in);
+        System.out.print("Ingrese numero:\t: ");
+        int a = capt.nextInt();
+        System.out.println("Resultat:" + a);
     }
 
-    public void inicialitzacióJoc() {
+    public static void inicialitzacióJoc() throws IOException {
+        //Creem una vista per poder fer els outputs per consola
+        Dibuixar vista = new Dibuixar();
+
+        //Creem scanner per poder agafar inputs de l'usuari
+        Scanner inputUser = new Scanner(System.in);
+
         boolean fiPartida = false;
         Scanner sc = new Scanner(System.in);
         int nJugadors = 0;
         int dificultat = 0;
 
+        //Presentació del joc
+
         //Inicialitzar ahorcado
+        Ahorcado ahorcado = null; //Si hacemos esto en otra función, habria que pasarle este ahorcado
         boolean inicialitzacioCorrecta = false;
         while (!inicialitzacioCorrecta) {
-            //Aqui hay que hacer el input por consola
+            //Demanem el nombre de jugadors
+            vista.missatgeIntroduirJugador();
+            nJugadors = inputUser.nextInt();
 
-            Ahorcado ahorcado = new Ahorcado(1,1);
+            //Demanem la dificultat del joc
+            vista.missatgeIntroduirDificultat();
+            dificultat = inputUser.nextInt();
+
+            ahorcado = new Ahorcado(nJugadors, dificultat);
+
+            //Inicialitzem ahorcado amb la dificultat i nombre de jugadors seleccionat per l'usuari
             if (ahorcado.errorCreation == true) {
                 ahorcado = null;
             }
@@ -97,14 +113,39 @@ public class Main {
             }
         }
 
-        while (!fiPartida) {
+        //Creem un paraulesDisponibles per obtenir la paraula misteriosa
+        ParaulesDisponibles paraulesDisponibles = new ParaulesDisponibles(ahorcado.getNivellDificultat());
 
+        if (inicialitzacioCorrecta == true) {
+            //Una vegada hem seleccionat el nombre de jugadors i la dificultat correctament agafem la paraula a esbrinar de paraulesDisponibles
+            ahorcado.assignarParaulaMisteriosa(paraulesDisponibles.getParaulaMisteriosa());
+
+            while (!fiPartida) {
+
+                //Demanem una de les dues opcions que té l'usuari
+                vista.missatgeEscullOpcio();
+                vista.missatgeIntroduirLletra();
+                vista.missatgeIntroduirParaula();
+
+                int opcio = inputUser.nextInt();
+                if(opcio == 1){
+                    vista.missatgeIntrodueixLletra();
+                    char letra;
+                    letra = inputUser.next().charAt(0);
+                    ahorcado.introduirLletra(letra);
+                    fiPartida = ahorcado.comprovaEstatPartida();
+
+                } else if (opcio == 2) {
+                    vista.missatgeIntrodueixParaula();
+                    String paraula;
+                    paraula = inputUser.next();
+
+                    //Comprovem que la paraula introduida sigui la correcta, en el cas de ser correcta, es finalitza la partida
+                    fiPartida = ahorcado.introduirParaula(paraula);
+                }
+            }
         }
 
-        boolean fiJoc = false;
-        while (!fiJoc) {
-
-        }
     }
 
 

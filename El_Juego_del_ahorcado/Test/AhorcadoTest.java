@@ -107,13 +107,13 @@ public class AhorcadoTest {
     }
 
     @Test
-    public void testIntroduirParaula() {
+    public void testIntroduirParaulaMisteriosa() {
         int resultatEsperat = 0;
         int resultatObtingut = 0;
         //Introducció paraula qualsevol en majuscula
         Ahorcado ipq = new Ahorcado(1,1);
         resultatEsperat = 0;
-        resultatObtingut =  ipq.introduirParaula("RATON");
+        resultatObtingut =  ipq.assignarParaulaMisteriosa("RATON");
         assertEquals(resultatEsperat,resultatObtingut);
 
         char [] resultatEsperatArray = {'R','A','T','O','N'};
@@ -122,7 +122,7 @@ public class AhorcadoTest {
         //Introducció paraula qualsevol tota en minúscula
         Ahorcado ipqtm = new Ahorcado(1,1);
         resultatEsperat = -1;
-        resultatObtingut =  ipqtm.introduirParaula("raton");
+        resultatObtingut =  ipqtm.assignarParaulaMisteriosa("raton");
         assertEquals(resultatEsperat,resultatObtingut);
 
         assertArrayEquals(null, ipqtm.getParaulaMisteriosaArray());
@@ -130,7 +130,7 @@ public class AhorcadoTest {
         //Introducció de qualsevol paraula amb minuscules i majuscules
         Ahorcado iqpmm = new Ahorcado(1,1);
         resultatEsperat = -1;
-        resultatObtingut =  iqpmm.introduirParaula("RaToN");
+        resultatObtingut =  iqpmm.assignarParaulaMisteriosa("RaToN");
         assertEquals(resultatEsperat,resultatObtingut);
 
         assertArrayEquals(null, iqpmm.getParaulaMisteriosaArray());
@@ -138,7 +138,7 @@ public class AhorcadoTest {
         //Introducció caràcter invàlid
         Ahorcado ici = new Ahorcado(1,1);
         resultatEsperat = -1;
-        resultatObtingut =  ici.introduirParaula("çñ)A");
+        resultatObtingut =  ici.assignarParaulaMisteriosa("çñ)A");
         assertEquals(resultatEsperat,resultatObtingut);
 
         assertArrayEquals(null, ici.getParaulaMisteriosaArray());
@@ -202,13 +202,125 @@ public class AhorcadoTest {
         int resultatEsperat = 0;
         int resultatObtingut = 0;
 
-        //Introducció d'una lletra qualsevol
-        Ahorcado ilq = new Ahorcado(1,1);
+        //Valor limit inferior
+        Ahorcado li = new Ahorcado(1,1);
+        li.assignarParaulaMisteriosa("MAMAS");
         resultatEsperat = 0;
-        resultatObtingut = ilq.introduirLletra('A');
+        resultatObtingut = li.introduirLletra('A');
+        char[] resultatEsperatParaulailq = {'_','A','_','A','_'};
+        char[] resultatObtingutParaulailq = li.getEspaisDesxifratsArrayChar();
+        assertEquals(resultatEsperat, resultatObtingut);
+        assertArrayEquals(resultatEsperatParaulailq,resultatObtingutParaulailq);
+
+        //Valor esquerra limit inferior
+        Ahorcado eli = new Ahorcado(1,1);
+        eli.assignarParaulaMisteriosa("MAMAS");
+        resultatEsperat = -1;
+        resultatObtingut = eli.introduirLletra('@');
+        char[] resultatEsperatParaulali = {'_','_','_','_','_'};
+        char[] resultatObtingutParaulali = eli.getEspaisDesxifratsArrayChar();
+        assertEquals(resultatEsperat, resultatObtingut);
+        assertArrayEquals(resultatEsperatParaulali,resultatObtingutParaulali);
+
+        //Valor dreta limit inferior
+        Ahorcado dli = new Ahorcado(1,1);
+        dli.assignarParaulaMisteriosa("MAMAS");
+        resultatEsperat = 0;
+        resultatObtingut = dli.introduirLletra('Y');
+        char[] resultatEsperatParauladli = {'_','_','_','_','_'};
+        char[] resultatObtingutParauldli = dli.getEspaisDesxifratsArrayChar();
+        assertEquals(resultatEsperat, resultatObtingut);
+        assertArrayEquals(resultatEsperatParauladli,resultatObtingutParauldli);
+
+        //Valor limit superior
+        Ahorcado ls = new Ahorcado(1,1);
+        ls.assignarParaulaMisteriosa("MAMAS");
+        resultatEsperat = 0;
+        resultatObtingut = ls.introduirLletra('Z');
+        char[] resultatEsperatParauladls = {'_','_','_','_','_'};
+        char[] resultatObtingutParauldls = ls.getEspaisDesxifratsArrayChar();
+        assertEquals(resultatEsperat, resultatObtingut);
+        assertArrayEquals(resultatEsperatParauladls,resultatObtingutParauldls);
+
+        //Valor limit esquerra superior
+        Ahorcado les = new Ahorcado(1,1);
+        les.assignarParaulaMisteriosa("MAMAS");
+        resultatEsperat = 0;
+        resultatObtingut = les.introduirLletra('B');
+        char[] resultatEsperatParauladles = {'_','_','_','_','_'};
+        char[] resultatObtingutParauldles = les.getEspaisDesxifratsArrayChar();
+        assertEquals(resultatEsperat, resultatObtingut);
+        assertArrayEquals(resultatEsperatParauladles,resultatObtingutParauldles);
+
+        //Valor limit dreta superior
+        Ahorcado lds = new Ahorcado(1,1);
+        lds.assignarParaulaMisteriosa("MAMAS");
+        resultatEsperat = -1;
+        resultatObtingut = lds.introduirLletra('[');
+        char[] resultatEsperatParauladlds = {'_','_','_','_','_'};
+        char[] resultatObtingutParauldlds = lds.getEspaisDesxifratsArrayChar();
+        assertEquals(resultatEsperat, resultatObtingut);
+        assertArrayEquals(resultatEsperatParauladlds,resultatObtingutParauldlds);
+
+        //Valor intermig
+        Ahorcado vi = new Ahorcado(1,1);
+        vi.assignarParaulaMisteriosa("MAMAS");
+        resultatEsperat = 0;
+        resultatObtingut = vi.introduirLletra('M');
+        char[] resultatEsperatParaulavi = {'M','_','M','_','_'};
+        char[] resultatObtingutParaulavi = vi.getEspaisDesxifratsArrayChar();
+        assertEquals(resultatEsperat, resultatObtingut);
+        assertArrayEquals(resultatEsperatParaulavi,resultatObtingutParaulavi);
+
+    }
+
+    @Test
+    public void testIntroduirParaula(){
+        //paraula correcte:
+        boolean resultatEsperat = true;
+        boolean resultatObtingut = false;
+        Ahorcado a = new Ahorcado(1,1);
+        a.assignarParaulaMisteriosa("CABRA");
+        resultatObtingut = a.introduirParaula("CABRA");
+        assertEquals(resultatEsperat, resultatObtingut);
+
+        //paraula incorrecte:
+        boolean resultatEsperatIn = false;
+        boolean resultatObtingutIn = false;
+        Ahorcado b = new Ahorcado(1,1);
+        b.assignarParaulaMisteriosa("CABRA");
+        resultatObtingut = b.introduirParaula("MOBIL");
+        assertEquals(resultatEsperatIn, resultatObtingutIn);
+
+        //paraula mes curta:
+        boolean resultatEsperatCurt = false;
+        boolean resultatObtingutCurt = false;
+        Ahorcado c = new Ahorcado(1,1);
+        c.assignarParaulaMisteriosa("PATOS");
+        resultatObtingut = c.introduirParaula("NO");
+        assertEquals(resultatEsperat, resultatObtingut);
+
+
+        //paraula mes llarga:
+        boolean resultatEsperatLlarg = false;
+        boolean resultatObtingutLlarg = false;
+        Ahorcado d = new Ahorcado(1,1);
+        d.assignarParaulaMisteriosa("ABRIR");
+        resultatObtingut = d.introduirParaula("TECLADOS");
+        assertEquals(resultatEsperat, resultatObtingut);
+
+        //paraula minuscules
+        boolean resultatEsperatMin = false;
+        boolean resultatObtingutMin = false;
+        Ahorcado e = new Ahorcado(1,1);
+        e.assignarParaulaMisteriosa("TECLADO");
+        resultatObtingut = e.introduirParaula("teclado");
         assertEquals(resultatEsperat, resultatObtingut);
 
     }
+
+
+
 
     @Test
     public void comprovaLletra(){ //CREAR UN MOCKOBJECT
@@ -227,12 +339,16 @@ public class AhorcadoTest {
         assertEquals(resultatEsperat1, valorRealCorrecte1);
         assertEquals(resultatEsperat2, calorRealIncorrecte2);
 
-
-
 /*97-122*/
         /*assert(type(a) == int)
     assert(type(b) == int)*/
     };
+
+
+
+
+
+            //vista controlador TDD caixa negra Caixa blanca Coverage(decision i condicion) 1 mock object
 }
 
 
