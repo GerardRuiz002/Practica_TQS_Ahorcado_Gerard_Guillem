@@ -1,6 +1,7 @@
 package Model;
 import Vista.Dibuixar;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -30,11 +31,29 @@ public class Ranking {
         return opcio;
     }
 
-    public void guardarRanking() {
+    public static boolean guardarRanking(String pathArxiu, Serializable objecte) {
+        boolean sw = false;
+        try (FileOutputStream fos = new FileOutputStream(pathArxiu);
+                ObjectOutputStream sortida = new ObjectOutputStream(fos); ) {
+            sortida.writeObject(objecte);
+            sw = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
+        return sw;
     }
-    public void carregaRanking() {
 
+    public static <E> E carregaRanking(String pathArxiu, Class<E> casseObjecte) {
+        E objecte = null;
+        try (FileInputStream fis = new FileInputStream(pathArxiu);
+                ObjectInputStream entrada = new ObjectInputStream(fis)) {
+            objecte = (E) entrada.readObject();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return objecte;
     }
 
 }

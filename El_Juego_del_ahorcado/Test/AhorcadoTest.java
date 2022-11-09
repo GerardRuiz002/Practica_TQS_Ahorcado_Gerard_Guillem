@@ -192,12 +192,6 @@ public class AhorcadoTest {
     }
 
     @Test
-    public void testComprovaCaracterNoUtilitzat() {
-        Ahorcado t = new Ahorcado(1,1);
-
-    }
-
-    @Test
     public void testIntroduirLletra() {
         int resultatEsperat = 0;
         int resultatObtingut = 0;
@@ -274,6 +268,10 @@ public class AhorcadoTest {
 
     }
 
+    //crear MOCK OBJECT de comprovaEstatPartida()!!
+
+
+
     @Test
     public void testIntroduirParaula(){
         //paraula correcte:
@@ -318,6 +316,28 @@ public class AhorcadoTest {
         assertEquals(resultatEsperat, resultatObtingut);
 
     }
+    @Test
+    public void testComprovaCaracterNoUtilitzat(){
+        //caracter es troba en lletres disponibles
+        Ahorcado a = new Ahorcado(1,1);
+        boolean resultatEsperatA = true;
+        boolean resultatObtingutA = false;
+        a.assignarParaulaMisteriosa("RATON");
+        a.introduirLletra('R');
+        resultatObtingutA = a.comprovaCaracterNoUtilitzat('A');
+        assertEquals(resultatEsperatA,resultatObtingutA);
+
+        //caracter no es troba en lletres disponibles
+        Ahorcado b = new Ahorcado(1,1);
+        boolean resultatEsperatB = false;
+        boolean resultatObtingutB = false;
+        a.assignarParaulaMisteriosa("RATON");
+        a.introduirLletra('A');
+        resultatObtingutB = a.comprovaCaracterNoUtilitzat('A');
+        assertEquals(resultatEsperatB,resultatObtingutB);
+    }
+
+
 
 
 
@@ -358,6 +378,7 @@ public class AhorcadoTest {
 //Valor esquerra limit inferior
 
 //Valor dreta limit inferior
+
 
 //Valor limit superior
 

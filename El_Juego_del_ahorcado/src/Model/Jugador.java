@@ -1,16 +1,17 @@
 package Model;
 
 public class Jugador {
-    private int idJugador;
     private String nomJugador;
     private int puntuacio;
     private int tornAssignat;
 
-    Jugador(int idJugador, String nomJugador) {
-        this.idJugador = idJugador;
+    public Jugador(String nomJugador) {
         this.nomJugador = nomJugador;
+        this.puntuacio = 0;
     }
 
-    public int getIdJugador() {return idJugador;}
     public String getNomJugador() {return nomJugador;}
+
+    public void setPuntuacio(int punts) { this.puntuacio += punts; }
+    public void setTornAssignat(int torn) { this.tornAssignat = torn; }
 }

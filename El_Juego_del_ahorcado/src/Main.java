@@ -93,35 +93,38 @@ public class Main {
 
         //Presentació del joc
 
-        //Inicialitzar ahorcado
-        Ahorcado ahorcado = null; //Si hacemos esto en otra función, habria que pasarle este ahorcado
+        //Donem opció de carregar partida anterior o fer una nova
+
+        int opcioCarregaOInicia = ranking.CarregaPartidaONovaPartida();
+        Ahorcado ahorcado = null;
         boolean inicialitzacioCorrecta = false;
         while (!inicialitzacioCorrecta) {
-            //Demanem el nombre de jugadors
-            vista.missatgeIntroduirJugador();
-            nJugadors = inputUser.nextInt();
+            if (opcioCarregaOInicia == 1) {
+                //Inicialitzar ahorcado
+                //Demanem el nombre de jugadors
+                vista.missatgeIntroduirJugador();
+                nJugadors = inputUser.nextInt();
 
-            //Demanem la dificultat del joc
-            vista.missatgeIntroduirDificultat();
-            dificultat = inputUser.nextInt();
+                //Demanem la dificultat del joc
+                vista.missatgeIntroduirDificultat();
+                dificultat = inputUser.nextInt();
 
-            //Donem opció de carregar partida anterior o fer una nova
-            int opcioCarregaOInicia = ranking.CarregaPartidaONovaPartida();
-            if (opcioCarregaOInicia == 2) {
-                //Carregar partida
-                nJugadors = ;
-                dificultat = ;
-                //puntuacio de cada jugador
-            }
+                //Inicialitzem ahorcado amb la dificultat i nombre de jugadors seleccionat per l'usuari
+                ahorcado = new Ahorcado(nJugadors, dificultat);
 
-            ahorcado = new Ahorcado(nJugadors, dificultat);
-
-            //Inicialitzem ahorcado amb la dificultat i nombre de jugadors seleccionat per l'usuari
-            if (ahorcado.errorCreation == true) {
-                ahorcado = null;
-            }
-            else if (ahorcado.errorCreation == false) {
-                inicialitzacioCorrecta = true;
+                if (ahorcado.errorCreation == true) {
+                    ahorcado = null;
+                } else if (ahorcado.errorCreation == false) {
+                    ahorcado.assignaTornJugador();
+                    inicialitzacioCorrecta = true;
+                }
+            } else if (opcioCarregaOInicia == 2) {
+                //Inicialitzem un ahorcado a partir del .txt amb les dades de la partida guardada
+                ahorcado = Ranking.carregaRanking("path_arxiu", Ahorcado.class);
+                if (ahorcado.errorCreation == false)
+                    inicialitzacioCorrecta = true;
+                else
+                    vista.errorCarregaArxiu();
             }
         }
 
@@ -133,11 +136,11 @@ public class Main {
             ahorcado.assignarParaulaMisteriosa(paraulesDisponibles.getParaulaMisteriosa());
 
             while (!fiPartida) {
-
-
-
                 ahorcado.escullOpcio();
+                vista.mostrarEspaisDesxifrats(ahorcado.getEspaisDesxifrats().toString());
+                vista.mostrarVidesActuals(ahorcado.getVides());
                 ahorcado.canviarTorn();
+                fiPartida = ahorcado.getFipartida();
             }
         }
 
