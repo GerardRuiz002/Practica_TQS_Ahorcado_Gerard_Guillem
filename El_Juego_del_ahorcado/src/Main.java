@@ -1,5 +1,6 @@
 import Controlador.Ahorcado;
 import Model.ParaulesDisponibles;
+import Model.Ranking;
 import Vista.Dibuixar;
 
 import java.io.IOException;
@@ -83,8 +84,10 @@ public class Main {
         //Creem scanner per poder agafar inputs de l'usuari
         Scanner inputUser = new Scanner(System.in);
 
+        //Inicialitzem ranking
+        Ranking ranking = new Ranking();
+
         boolean fiPartida = false;
-        Scanner sc = new Scanner(System.in);
         int nJugadors = 0;
         int dificultat = 0;
 
@@ -101,6 +104,15 @@ public class Main {
             //Demanem la dificultat del joc
             vista.missatgeIntroduirDificultat();
             dificultat = inputUser.nextInt();
+
+            //Donem opció de carregar partida anterior o fer una nova
+            int opcioCarregaOInicia = ranking.CarregaPartidaONovaPartida();
+            if (opcioCarregaOInicia == 2) {
+                //Carregar partida
+                nJugadors = ;
+                dificultat = ;
+                //puntuacio de cada jugador
+            }
 
             ahorcado = new Ahorcado(nJugadors, dificultat);
 
@@ -122,27 +134,10 @@ public class Main {
 
             while (!fiPartida) {
 
-                //Demanem una de les dues opcions que té l'usuari
-                vista.missatgeEscullOpcio();
-                vista.missatgeIntroduirLletra();
-                vista.missatgeIntroduirParaula();
 
-                int opcio = inputUser.nextInt();
-                if(opcio == 1){
-                    vista.missatgeIntrodueixLletra();
-                    char letra;
-                    letra = inputUser.next().charAt(0);
-                    ahorcado.introduirLletra(letra);
-                    fiPartida = ahorcado.comprovaEstatPartida();
 
-                } else if (opcio == 2) {
-                    vista.missatgeIntrodueixParaula();
-                    String paraula;
-                    paraula = inputUser.next();
-
-                    //Comprovem que la paraula introduida sigui la correcta, en el cas de ser correcta, es finalitza la partida
-                    fiPartida = ahorcado.introduirParaula(paraula);
-                }
+                ahorcado.escullOpcio();
+                ahorcado.canviarTorn();
             }
         }
 

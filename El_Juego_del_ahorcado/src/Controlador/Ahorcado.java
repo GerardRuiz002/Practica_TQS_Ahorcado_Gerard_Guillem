@@ -5,13 +5,16 @@ import Vista.Dibuixar;
 import java.util.*;
 import java.io.*;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Ahorcado {
     public boolean errorCreation; //Serà true en el cas de que s'hagi introduït malament la dificultat i el numero de jugadors
     private Dibuixar vista = new Dibuixar();
     private int nJugadors; //minim 1 jugador, maxim 4 jugadors
-    private int tornJugadorId;
     private int videsDisponibles;
+
+    private int torn;
+    boolean fiPartida;
 
     private String paraulaMisteriosa;
     private char paraulaMisteriosaArray[];
@@ -45,6 +48,9 @@ public class Ahorcado {
             this.espaisDesxifrats = new char[midaParaulaMisteriosa];
             this.generarEspaisParaulaMisteriosa();
 
+            this.torn = 1;
+            this.fiPartida = false;
+
             this.errorCreation = false;
         }
         else {
@@ -64,6 +70,7 @@ public class Ahorcado {
     public int getNivellDificultat() { return this.nivellDificultat; }
     public int getVidesDisponibles() { return this.videsDisponibles; }
     public char[] getParaulaMisteriosaArray() { return  this.paraulaMisteriosaArray; }
+    public int getTorn() { return  this.torn; }
 
     //Inicialitza les lletres disponibles a escollir (amb l'abecedari sense ñ)
     public void inicialitzaLletresDisponibles() {
@@ -142,7 +149,7 @@ public class Ahorcado {
     public boolean introduirParaula(String paraula) {
         boolean paraulaEncertada = false;
         if (paraula.equals(paraulaMisteriosa)) {
-            vista.guanyador(tornJugadorId);
+            vista.guanyador(torn);
             paraulaEncertada = true;
             return paraulaEncertada;
         }
@@ -240,12 +247,60 @@ public class Ahorcado {
             }
 
             if (paraulaNoCompleta == false){
-                vista.guanyador(tornJugadorId);
+                vista.guanyador(torn);
                 partidaFinalitzada = true;
             }
             return partidaFinalitzada;
         }
     }
+
+    public void canviarTorn() {
+        if (torn != nJugadors)
+            torn += 1;
+        else
+            torn = 1;
+    }
+
+    public int escullOpcio() {
+        Scanner inputUser = new Scanner(System.in);
+
+        //Controlem que l'opció sigui corrcta
+        int opcio;
+        boolean sortir = false;
+        do {
+            //Demanem una de les dues opcions que té l'usuari
+            vista.missatgeEscullOpcio();
+            vista.missatgeIntroduirLletra();
+            vista.missatgeIntroduirParaula();
+            opcio = inputUser.nextInt();
+            if (opcio != 1 || opcio != 2)
+                sortir = true;
+            else
+                vista.errorIntroduccoOpcio();
+        } while (!sortir);
+
+        if (opcio == 2 || opcio == 1) {
+            if (opcio == 1) {
+                vista.missatgeIntrodueixLletra();
+                char letra;
+                letra = inputUser.next().charAt(0);
+                this.introduirLletra(letra);
+                fiPartida = this.comprovaEstatPartida();
+
+            } else if (opcio == 2) {
+                vista.missatgeIntrodueixParaula();
+                String paraula;
+                paraula = inputUser.next();
+
+                //Comprovem que la paraula introduida sigui la correcta, en el cas de ser correcta, es finalitza la partida
+                fiPartida = this.introduirParaula(paraula);
+            }
+            return 0;
+        } else
+            return -1;
+    }
+
+
 }
 
 

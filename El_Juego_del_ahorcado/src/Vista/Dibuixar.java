@@ -11,6 +11,7 @@ public class Dibuixar {
     }
     public void errorLletraNoValida() { System.out.println("Aquesta lletra no correspon a cap lletra de la paraula misteriosa."); }
     public void errorParaulaNoCorrecta(String paraula) {System.out.println("La paraula misteriosa no era " + paraula + "!!");}
+    public void errorIntroduccoOpcio() { System.out.println("Has introduit una opció incorrecta.");}
 
     public void missatgeIntroduirJugador() { System.out.print("Introdueix el nombre de jugadors de la partida: "); };
     public void missatgeIntroduirDificultat() { System.out.print("Introdueix el nivell de dificultat de la partida: "); }
@@ -19,6 +20,9 @@ public class Dibuixar {
     public void missatgeIntrodueixLletra() { System.out.print("Introdueix la lletra que dessitgis (en majúscula): "); }
     public void missatgeIntroduirParaula() {System.out.println("2: introduir paraula"); };
     public void missatgeIntrodueixParaula() { System.out.print("Introdueix la paraula que dessitgis (tota en majúscules): "); }
+    public void misstgeTornJudadorN(int n) { System.out.print("Es el torn del jugador " + n);}
+
+    public void misstageCarregaPartidaONovaPartida() { System.out.println("Escull opció de inicialització de partida: \n 1.Començar partida nova \n 2.Carregar partida anterior");}
 
     public void errorNombreJugadors() { System.out.println("El número de jugador ha de ser minim 1 i màxim 4."); }
     public void errorDificultat() { System.out.println("La dificultat ha de ser com a minim 1 i com a màxim 3"); }
@@ -26,8 +30,8 @@ public class Dibuixar {
     public void perdedor() {
         System.out.println("S'han acabat les vides, partida perduda.");
     }
-    public void guanyador(int idJugador){
-        System.out.println("El guanyador és: " + idJugador + ".");
+    public void guanyador(int torn){
+        System.out.println("El guanyador és: " + torn + ".");
     }
 
 

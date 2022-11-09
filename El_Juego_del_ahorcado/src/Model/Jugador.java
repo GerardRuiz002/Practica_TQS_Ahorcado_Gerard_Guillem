@@ -3,6 +3,8 @@ package Model;
 public class Jugador {
     private int idJugador;
     private String nomJugador;
+    private int puntuacio;
+    private int tornAssignat;
 
     Jugador(int idJugador, String nomJugador) {
         this.idJugador = idJugador;
