@@ -269,7 +269,6 @@ public class Ahorcado implements Serializable{
             torn += 1;
         else
             torn = 1;
-
     }
 
     public int escullOpcio() {

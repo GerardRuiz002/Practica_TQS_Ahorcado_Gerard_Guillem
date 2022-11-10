@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d52aad4-6c3d-411b-bfd0-0be4b3622389" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controlador/Ahorcado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controlador/Ahorcado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Jugador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Ranking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Ranking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vista/Dibuixar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vista/Dibuixar.java" afterDir="false" />
     </list>
-    <list id="93eb15e3-0422-48c1-965f-ec03f34fd0cd" name="Changes by guill" comment="">
-      <change beforePath="$PROJECT_DIR$/Test/AhorcadoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/AhorcadoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controlador/Ahorcado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controlador/Ahorcado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Jugador.java" afterDir="false" />
-    </list>
+    <list id="93eb15e3-0422-48c1-965f-ec03f34fd0cd" name="Changes by guill" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,43 +20,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/Model/Jugador.java">
-      <ranges>
-        <range start1="3" end1="4" start2="3" end2="3" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="8" end1="10" start2="7" end2="8" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="11" end1="11" start2="9" end2="10" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
-        <range start1="13" end1="14" start2="12" end2="12" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="15" end1="15" start2="13" end2="16" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/Controlador/Ahorcado.java">
-      <ranges>
-        <range start1="2" end1="2" start2="2" end2="3" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="9" end1="10" start2="10" end2="11" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="12" end1="13" start2="13" end2="13" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="15" end1="15" start2="15" end2="18" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="31" end1="31" start2="34" end2="35" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="34" end1="35" start2="38" end2="38" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="38" end1="40" start2="41" end2="42" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="56" end1="57" start2="58" end2="58" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="62" end1="62" start2="63" end2="65" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="73" end1="73" start2="76" end2="78" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="95" end1="96" start2="100" end2="100" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="129" end1="129" start2="133" end2="143" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="163" end1="169" start2="177" end2="178" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
-        <range start1="238" end1="239" start2="247" end2="248" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="250" end1="250" start2="259" end2="260" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
-        <range start1="261" end1="261" start2="271" end2="272" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
-        <range start1="267" end1="268" start2="278" end2="279" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="272" end1="276" start2="283" end2="285" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="281" end1="297" start2="290" end2="295" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="298" end1="300" start2="296" end2="305" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="301" end1="303" start2="306" end2="306" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
-        <range start1="305" end1="309" start2="308" end2="308" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -187,7 +141,7 @@
       <workItem from="1667850202417" duration="8037000" />
       <workItem from="1667906061492" duration="3080000" />
       <workItem from="1667989729317" duration="7240000" />
-      <workItem from="1668006088263" duration="7387000" />
+      <workItem from="1668006088263" duration="7535000" />
     </task>
     <servers />
   </component>
