@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d52aad4-6c3d-411b-bfd0-0be4b3622389" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/AhorcadoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/AhorcadoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controlador/Ahorcado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controlador/Ahorcado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Ranking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Ranking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vista/Dibuixar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vista/Dibuixar.java" afterDir="false" />
     </list>
-    <list id="93eb15e3-0422-48c1-965f-ec03f34fd0cd" name="Changes by guill" comment="" />
+    <list id="93eb15e3-0422-48c1-965f-ec03f34fd0cd" name="Changes by guill" comment="">
+      <change beforePath="$PROJECT_DIR$/Test/AhorcadoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/AhorcadoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controlador/Ahorcado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controlador/Ahorcado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vista/Dibuixar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vista/Dibuixar.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +33,77 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/Model/Jugador.java">
+      <ranges>
+        <range start1="6" end1="6" start2="6" end2="7" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="7" end1="9" start2="8" end2="10" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="10" end1="10" start2="11" end2="12" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="13" end1="13" start2="15" end2="17" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="16" end1="16" start2="20" end2="21" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/Test/AhorcadoTest.java">
+      <ranges>
+        <range start1="70" end1="70" start2="70" end2="190" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="146" end1="146" start2="266" end2="267" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="267" end1="267" start2="388" end2="390" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="272" end1="274" start2="395" end2="395" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="298" end1="299" start2="419" end2="420" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="307" end1="308" start2="428" end2="429" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="315" end1="316" start2="436" end2="437" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="318" end1="318" start2="439" end2="440" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="338" end1="338" start2="460" end2="540" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="339" end1="345" start2="541" end2="542" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="361" end1="362" start2="558" end2="559" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="363" end1="364" start2="560" end2="561" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="365" end1="365" start2="562" end2="564" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="380" end1="381" start2="579" end2="579" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Controlador/Ahorcado.java">
+      <ranges>
+        <range start1="36" end1="36" start2="36" end2="37" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="77" end1="78" start2="78" end2="88" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="135" end1="136" start2="145" end2="145" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="137" end1="140" start2="146" end2="147" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="165" end1="165" start2="172" end2="173" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="175" end1="175" start2="183" end2="188" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="184" end1="185" start2="197" end2="198" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="209" end1="210" start2="222" end2="224" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="240" end1="240" start2="254" end2="265" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="258" end1="258" start2="283" end2="284" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="259" end1="260" start2="285" end2="285" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="273" end1="274" start2="298" end2="299" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="275" end1="275" start2="300" end2="316" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="276" end1="276" start2="317" end2="320" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="277" end1="278" start2="321" end2="321" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="281" end1="284" start2="324" end2="326" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="285" end1="286" start2="327" end2="329" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="287" end1="287" start2="330" end2="332" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="288" end1="304" start2="333" end2="334" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="305" end1="305" start2="335" end2="341" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Vista/Dibuixar.java">
+      <ranges>
+        <range start1="24" end1="24" start2="24" end2="25" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="28" end1="28" start2="29" end2="36" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="31" end1="38" start2="39" end2="42" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Main.java">
+      <ranges>
+        <range start1="15" end1="79" start2="15" end2="15" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="117" end1="117" start2="53" end2="54" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="118" end1="118" start2="55" end2="61" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="137" end1="137" start2="80" end2="81" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="138" end1="141" start2="82" end2="89" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+        <range start1="142" end1="142" start2="90" end2="91" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
+        <range start1="144" end1="144" start2="93" end2="105" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
+      </ranges>
+    </file>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -30,24 +113,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/gerar/Documents/GitHub/Practica_TQS_Ahorcado/El_Juego_del_ahorcado&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "last_opened_file_path": "C:/Users/gerar/Documents/GitHub/Practica_TQS_Ahorcado/El_Juego_del_ahorcado",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "inlay.hints"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -62,49 +145,51 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+  <component name="RunManager" selected="JUnit.AhorcadoTest">
+    <configuration name="AhorcadoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="El_Juego_del_ahorcado" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AhorcadoTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AhorcadoTest.introduirLletra" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AhorcadoTest.TestComprovaEstatPartida" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="El_Juego_del_ahorcado" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AhorcadoTest" />
-      <option name="METHOD_NAME" value="introduirLletra" />
+      <option name="METHOD_NAME" value="TestComprovaEstatPartida" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AhorcadoTest.testComprovaLletraCorrecta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AhorcadoTest.TestComprovaLletraCorrecta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="El_Juego_del_ahorcado" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AhorcadoTest" />
-      <option name="METHOD_NAME" value="testComprovaLletraCorrecta" />
+      <option name="METHOD_NAME" value="TestComprovaLletraCorrecta" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AhorcadoTest.testIntroduirLletra" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AhorcadoTest.testAssignarTornJugador" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="El_Juego_del_ahorcado" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AhorcadoTest" />
-      <option name="METHOD_NAME" value="testIntroduirLletra" />
+      <option name="METHOD_NAME" value="testAssignarTornJugador" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AhorcadoTest.testIntroduirParaula" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AhorcadoTest.testNumJugadors" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="El_Juego_del_ahorcado" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AhorcadoTest" />
-      <option name="METHOD_NAME" value="testIntroduirParaula" />
+      <option name="METHOD_NAME" value="testNumJugadors" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -112,11 +197,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.AhorcadoTest.testIntroduirParaula" />
-        <item itemvalue="JUnit.AhorcadoTest.testIntroduirLletra" />
-        <item itemvalue="JUnit.AhorcadoTest.testComprovaLletraCorrecta" />
-        <item itemvalue="JUnit.AhorcadoTest.introduirLletra" />
+        <item itemvalue="JUnit.AhorcadoTest" />
+        <item itemvalue="JUnit.AhorcadoTest.testNumJugadors" />
+        <item itemvalue="JUnit.AhorcadoTest.TestComprovaEstatPartida" />
+        <item itemvalue="JUnit.AhorcadoTest.testAssignarTornJugador" />
+        <item itemvalue="JUnit.AhorcadoTest.TestComprovaLletraCorrecta" />
       </list>
     </recent_temporary>
   </component>
@@ -142,6 +227,8 @@
       <workItem from="1667906061492" duration="3080000" />
       <workItem from="1667989729317" duration="7240000" />
       <workItem from="1668006088263" duration="7535000" />
+      <workItem from="1668102756023" duration="11000" />
+      <workItem from="1668263132121" duration="14784000" />
     </task>
     <servers />
   </component>
@@ -168,5 +255,8 @@
         <watch expression="paraulaMisteriosa" language="JAVA" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/El_Juego_del_ahorcado$AhorcadoTest.ic" NAME="AhorcadoTest Coverage Results" MODIFIED="1668277970160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

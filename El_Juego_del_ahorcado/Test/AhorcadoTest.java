@@ -69,6 +69,126 @@ public class AhorcadoTest {
     }
 
     @Test
+    public void testGenerarMidaParaulaMisteriosa() {
+        int resultatEsperat = 0;
+        int resultatObtingut = 0;
+
+        //Dificultat 1 (frontera inferior)
+        Ahorcado mida5 = new Ahorcado(1,1);
+        resultatEsperat = 5;
+        resultatObtingut = mida5.getMidaParaulaMisteriosa();
+        assertEquals(resultatEsperat, resultatObtingut);
+
+        //Dificultat 2 (intermig, dreta inferior, esquerra superior )
+        Ahorcado mida7 = new Ahorcado(1,2);
+        resultatEsperat = 7;
+        resultatObtingut = mida5.getMidaParaulaMisteriosa();
+        assertEquals(resultatEsperat, resultatObtingut);
+
+        //Dificultat 3 (frontera superior)
+        Ahorcado mida10 = new Ahorcado(1,3);
+        resultatEsperat = 10;
+        resultatObtingut = mida5.getMidaParaulaMisteriosa();
+        assertEquals(resultatEsperat, resultatObtingut);
+    }
+
+    @Test
+    public void testGenerarVidesPartida() {
+        int resultatEsperat = 0;
+        int resultatObtingut = 0;
+
+        //Dificultat 1 (frontera inferior)
+        Ahorcado vid8 = new Ahorcado(1,1);
+        resultatEsperat = 8;
+        resultatObtingut = vid8.getVidesDisponibles();
+        assertEquals(resultatEsperat, resultatObtingut);
+
+        //Dificultat 2 (intermig, dreta inferior, esquerra superior )
+        Ahorcado vid5 = new Ahorcado(1,2);
+        resultatEsperat = 5;
+        resultatObtingut = vid5.getVidesDisponibles();
+        assertEquals(resultatEsperat, resultatObtingut);
+
+        //Dificultat 3 (frontera superior)
+        Ahorcado vid3 = new Ahorcado(1,3);
+        resultatEsperat = 3;
+        resultatObtingut = vid3.getVidesDisponibles();
+        assertEquals(resultatEsperat, resultatObtingut);
+    }
+
+    //Partició equivalent
+    @Test
+    public void testAssignarParaulaMisteriosa() {
+        int resultatEsperat = 0;
+        int resultatObtingut = 0;
+        String paraula = null;
+        String paraulaEsperada = null;
+
+        //Paraula correcta 1
+        Ahorcado pc1 = new Ahorcado(1,1);
+        paraula = "PATAS";
+        paraulaEsperada = "PATAS";
+        resultatEsperat = 0;
+        resultatObtingut = pc1.assignarParaulaMisteriosa(paraula);
+        assertEquals(resultatEsperat, resultatObtingut);
+        assertEquals(paraulaEsperada, pc1.getParaulaMisteriosa());
+
+        //Paraula correcta 2
+        Ahorcado pc2 = new Ahorcado(1,1);
+        paraula = "GATOS";
+        paraulaEsperada = "GATOS";
+        resultatEsperat = 0;
+        resultatObtingut = pc2.assignarParaulaMisteriosa(paraula);
+        assertEquals(resultatEsperat, resultatObtingut);
+        assertEquals(paraulaEsperada, pc2.getParaulaMisteriosa());
+
+        //Paraula incorrecta 1
+        Ahorcado pi1 = new Ahorcado(1,1);
+        paraula = "cacas";
+        paraulaEsperada = null;
+        resultatEsperat = -1;
+        resultatObtingut = pi1.assignarParaulaMisteriosa(paraula);
+        assertEquals(resultatEsperat, resultatObtingut);
+        assertEquals(paraulaEsperada, pi1.getParaulaMisteriosa());
+
+        //Paraula incorrecta 2
+        Ahorcado pi2 = new Ahorcado(1,1);
+        paraula = "pecas";
+        paraulaEsperada = null;
+        resultatEsperat = -1;
+        resultatObtingut = pi2.assignarParaulaMisteriosa(paraula);
+        assertEquals(resultatEsperat, resultatObtingut);
+        assertEquals(paraulaEsperada, pi2.getParaulaMisteriosa());
+    }
+
+    @Test
+    public void testAssignarTornJugador() {
+        int tornJugador1Esperat = 0;
+        int tornJugador2Esperat = 0;
+        int tornJugador3Esperat = 0;
+        int tornJugador4Esperat = 0;
+
+        //Num jugadors 1 (frontera inferior)
+        Ahorcado j1 = new Ahorcado(1,1);
+        j1.assignaTornJugador();
+        tornJugador1Esperat = 1;
+        assertEquals(tornJugador1Esperat, j1.getTornJugadorN(0));
+
+        //Num jugadors 4 (frontera superior)
+        Ahorcado j4 = new Ahorcado(4, 1);
+        j4.assignaTornJugador();
+        tornJugador1Esperat = 1;
+        tornJugador2Esperat = 2;
+        tornJugador3Esperat = 3;
+        tornJugador4Esperat = 4;
+        assertEquals(tornJugador1Esperat, j4.getTornJugadorN(0));
+        assertEquals(tornJugador2Esperat, j4.getTornJugadorN(1));
+        assertEquals(tornJugador3Esperat, j4.getTornJugadorN(2));
+        assertEquals(tornJugador4Esperat, j4.getTornJugadorN(3));
+    }
+
+    //Valors limit i frontera
+    @Test
     public void testNumJugadors() {
         //Valor limit inferior
         Ahorcado nJugadorsLimInf = new Ahorcado(1, 1);
@@ -144,6 +264,7 @@ public class AhorcadoTest {
         assertArrayEquals(null, ici.getParaulaMisteriosaArray());
     }
 
+    //Limits i frontera
     @Test
     public void testComprovaLletraCorrecta() {
         boolean resultatEsperat = false;
@@ -266,11 +387,11 @@ public class AhorcadoTest {
         assertEquals(resultatEsperat, resultatObtingut);
         assertArrayEquals(resultatEsperatParaulavi,resultatObtingutParaulavi);
 
+
+
     }
 
     //crear MOCK OBJECT de comprovaEstatPartida()!!
-
-
 
     @Test
     public void testIntroduirParaula(){
@@ -296,7 +417,7 @@ public class AhorcadoTest {
         Ahorcado c = new Ahorcado(1,1);
         c.assignarParaulaMisteriosa("PATOS");
         resultatObtingut = c.introduirParaula("NO");
-        assertEquals(resultatEsperat, resultatObtingut);
+        assertEquals(resultatEsperatCurt, resultatObtingutCurt);
 
 
         //paraula mes llarga:
@@ -305,7 +426,7 @@ public class AhorcadoTest {
         Ahorcado d = new Ahorcado(1,1);
         d.assignarParaulaMisteriosa("ABRIR");
         resultatObtingut = d.introduirParaula("TECLADOS");
-        assertEquals(resultatEsperat, resultatObtingut);
+        assertEquals(resultatEsperatLlarg, resultatObtingutLlarg);
 
         //paraula minuscules
         boolean resultatEsperatMin = false;
@@ -313,9 +434,10 @@ public class AhorcadoTest {
         Ahorcado e = new Ahorcado(1,1);
         e.assignarParaulaMisteriosa("TECLADO");
         resultatObtingut = e.introduirParaula("teclado");
-        assertEquals(resultatEsperat, resultatObtingut);
+        assertEquals(resultatEsperatMin, resultatObtingutMin);
 
     }
+
     @Test
     public void testComprovaCaracterNoUtilitzat(){
         //caracter es troba en lletres disponibles
@@ -338,11 +460,86 @@ public class AhorcadoTest {
     }
 
 
+    @Test
+    public void TestComprovaLletraCorrecta(){
+
+        //Condition coverage:
+        // (true && false)
+        Ahorcado a = new Ahorcado(1,1);
+        boolean resultatEsperat = false;
+        boolean resultatObtingut = false;
+        resultatObtingut = a.comprovaLletraCorrecta('h');
+        assertEquals(resultatEsperat, resultatObtingut);
+
+        //(false && true)
+        Ahorcado b = new Ahorcado(1,1);
+        boolean resultatEsperatB = false;
+        boolean resultatObtingutB = false;
+        resultatObtingutB = a.comprovaLletraCorrecta('3');
+        assertEquals(resultatEsperatB, resultatObtingutB);
+
+
+        //Decition Coverage
+        // (false):
+        Ahorcado c = new Ahorcado(1,1);
+        boolean resultatEsperatC = false;
+        boolean resultatObtingutC = false;
+        resultatObtingutC = a.comprovaLletraCorrecta('2');
+        assertEquals(resultatEsperatC, resultatObtingutC);
+
+        //(true):
+        Ahorcado d = new Ahorcado(1,1);
+        boolean resultatEsperatD = true;
+        boolean resultatObtingutD = false;
+        resultatObtingutD = a.comprovaLletraCorrecta('A');
+        assertEquals(resultatEsperatD, resultatObtingutD);
+    }
+
 
 
 
 
     @Test
+    public void testComprovaEstatPartida(){
+
+        //videsDisponibles = 0  (true)
+        Ahorcado a = new Ahorcado(1,1);
+        a.assignaTornJugador();
+        boolean resultatEsperat = true;
+        boolean resultatObtingut = false;
+        a.assignarParaulaMisteriosa("RATON");
+        a.setVidesDisponibles(0);
+        char array[] = {'R','A','T','O','N'};
+        resultatObtingut = a.comprovaEstatPartida();
+        assertEquals(resultatEsperat, resultatObtingut);
+
+        //videsDisponibles != 0 ( false): i paraula completa a (true)
+        Ahorcado b = new Ahorcado(1,1);
+        b.assignaTornJugador();
+        boolean resultatEsperat2 = true;
+        boolean resultatObtingut2 = false;
+        b.assignarParaulaMisteriosa("RATON");
+        b.setVidesDisponibles(3);
+        char array1[] = {'R','A','T','O','N'};
+        b.setEspaisDesxifrats(array1);
+        resultatObtingut2 = b.comprovaEstatPartida();
+        assertEquals(resultatEsperat2, resultatObtingut2);
+
+        //videsDisponibles a (false) i paraula completa a (false)
+        Ahorcado c = new Ahorcado(1,1);
+        c.assignaTornJugador();
+        boolean resultatEsperat3 = false;
+        boolean resultatObtingut3 = false;
+        c.assignarParaulaMisteriosa("RATON");
+        c.setVidesDisponibles(3);
+        char array2[] = {'R','A','T','_','N'};
+        c.setEspaisDesxifrats(array2);
+        resultatObtingut3 = c.comprovaEstatPartida();
+        assertEquals(resultatEsperat3, resultatObtingut3);
+    }
+
+
+    @Test //INCOMPLETA!!!
     public void comprovaLletra(){ //CREAR UN MOCKOBJECT
         //Test comprovar que ens passen una lletra i no un altre caracter:
         Ahorcado paraulaMisteriosa = new Ahorcado(1,1);
@@ -359,10 +556,12 @@ public class AhorcadoTest {
         assertEquals(resultatEsperat1, valorRealCorrecte1);
         assertEquals(resultatEsperat2, calorRealIncorrecte2);
 
-/*97-122*/
+        /*97-122*/
         /*assert(type(a) == int)
-    assert(type(b) == int)*/
+        assert(type(b) == int)*/
     };
+
+
 
 
 
@@ -378,7 +577,6 @@ public class AhorcadoTest {
 //Valor esquerra limit inferior
 
 //Valor dreta limit inferior
-
 
 //Valor limit superior
 

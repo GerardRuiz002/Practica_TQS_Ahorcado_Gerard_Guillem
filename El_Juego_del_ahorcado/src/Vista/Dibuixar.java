@@ -22,20 +22,24 @@ public class Dibuixar {
     public void missatgeIntrodueixLletra() { System.out.print("Introdueix la lletra que dessitgis (en majúscula): "); }
     public void missatgeIntrodueixParaula() { System.out.print("Introdueix la paraula que dessitgis (tota en majúscules): "); }
     public void misstgeTornJudadorN(int n) { System.out.println("Es el torn del jugador " + n);}
+    public void missatgeSortintJoc() { System.out.println("Sortint del joc");}
 
     public void missatgeIntrodueixNom() { System.out.print("Introdueix el teu nom: "); }
 
     public void misstageCarregaPartidaONovaPartida() { System.out.println("Escull opció de inicialització de partida: \n 1.Començar partida nova \n 2.Carregar partida anterior");}
+    public void missatgeGuardarPartida() { System.out.println("Vols guardar la puntuació de la partida?  \n 1.No \n 2.Si");}
+    public void missatgeGuardatCorrectament(boolean guardatCorrecte) {
+        if (guardatCorrecte == false)
+            System.out.println("No s'ha pogut guardar correctament la partida");
+        else
+            System.out.println("S'ha guardat correctament la partida");
+    }
 
     public void mostrarVidesActuals(int vides) {System.out.println("Queden " + vides + " vides."); }
     public  void mostrarEspaisDesxifrats(String espaisDesxifrats) { System.out.println("Espais desxifrats: " + espaisDesxifrats); }
-
-    public void perdedor() {
-        System.out.println("S'han acabat les vides, partida perduda.");
-    }
-    public void guanyador(int torn){
-        System.out.println("El guanyador és: " + torn + ".");
-    }
+    public void perdedor() {System.out.println("S'han acabat les vides, partida perduda.");}
+    public void guanyador(int torn){System.out.println("El guanyador és: " + torn + ".");}
+    public void tornDe(int torn){System.out.println("Es el torn del jugador: " + torn + ".");}
 
 
     /*

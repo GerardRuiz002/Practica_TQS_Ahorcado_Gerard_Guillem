@@ -31,7 +31,7 @@ public class Ranking {
         return opcio;
     }
 
-    public static boolean guardarRanking(String pathArxiu, Serializable objecte) {
+    public boolean guardarRanking(String pathArxiu, Serializable objecte) {
         boolean sw = false;
         try (FileOutputStream fos = new FileOutputStream(pathArxiu);
                 ObjectOutputStream sortida = new ObjectOutputStream(fos); ) {

@@ -34,6 +34,7 @@ public class Ahorcado implements Serializable{
             this.nJugadors = numJugadors;
             this.jugadors = new Jugador[nJugadors];
             this.nivellDificultat = nivellDificultat;
+            this.paraulaMisteriosa = null;
 
             //Inicialitzem amb les lletres de l'abecedari:
             this.lletresDisponibles = new char[26];
@@ -75,7 +76,16 @@ public class Ahorcado implements Serializable{
     public char[] getParaulaMisteriosaArray() { return  this.paraulaMisteriosaArray; }
     public int getTorn() { return  this.torn; }
     public boolean getFipartida() { return this.fiPartida; }
-    public int getVides() { return this.videsDisponibles; }
+    public int getMidaParaulaMisteriosa() { return this.midaParaulaMisteriosa; }
+    public String getParaulaMisteriosa() { return  this.paraulaMisteriosa; }
+    public int getTornJugadorN(int n) { return this.jugadors[n].getTornAssignat(); }
+
+
+    //Setters:
+    public void setVidesDisponibles(int vides) {this.videsDisponibles = vides;}
+    public void setEspaisDesxifrats(char espaisDesxifrats[]) {this.espaisDesxifrats = espaisDesxifrats;}
+    public void setNomJugador(String nom, int index) { this.jugadors[index].setNomJugador(nom); }
+
 
     //Inicialitza les lletres disponibles a escollir (amb l'abecedari sense ñ)
     public void inicialitzaLletresDisponibles() {
@@ -133,11 +143,8 @@ public class Ahorcado implements Serializable{
     }
 
     public void assignaTornJugador() {
-        Scanner inputUser = new Scanner(System.in);
         for (int i = 0; i < nJugadors; i++) {
-            vista.missatgeIntrodueixNom();
-            String nom = inputUser.next();
-            jugadors[i] = new Jugador(nom);
+            jugadors[i] = new Jugador(i); //la i es la id que tindrà el jugador
             jugadors[i].setTornAssignat(i+1);
         }
     }
@@ -163,6 +170,7 @@ public class Ahorcado implements Serializable{
     public boolean introduirParaula(String paraula) {
         boolean paraulaEncertada = false;
         if (paraula.equals(paraulaMisteriosa)) {
+            aumentaPuntuacioParaulaCorrecta();
             vista.guanyador(torn);
             paraulaEncertada = true;
             return paraulaEncertada;
@@ -174,6 +182,11 @@ public class Ahorcado implements Serializable{
         }
     }
 
+
+    public void aumentaPuntuacioParaulaCorrecta(){
+        jugadors[torn-1].setPuntuacio(jugadors[torn-1].getPuntiacio()+1); //sumem 2 punts per haver encertat la paraula misteriosa
+    }
+
     public int introduirLletra(char lletra) {
         boolean caracterNoUtilitzat = comprovaCaracterNoUtilitzat(lletra);
 
@@ -182,7 +195,7 @@ public class Ahorcado implements Serializable{
             int i = 0;
             boolean trobada = false;
             while (!trobada && i < paraulaMisteriosa.length()) {
-                if (paraulaMisteriosaArray[i] == lletra) { //si troba lletra cridem al escriu lletra.
+                if (paraulaMisteriosaArray[i] == lletra) { //si troba lletra cridem al coloca lletra.
                     //Afegim a espais desxifrats la lletra ficada.
                     colocaLletra(lletra);
 
@@ -207,7 +220,8 @@ public class Ahorcado implements Serializable{
             //Cridem els dos tipus d'errors que pot haver-hi al introduir un caràcter
             if (caracterNoUtilitzat == false)
                 vista.errorLletraUtilitzada();
-            else
+
+            if (comprovaLletraCorrecta(lletra) == false)
                 vista.errorCaracterNoValid();
 
             videsDisponibles -= 1;
@@ -238,6 +252,17 @@ public class Ahorcado implements Serializable{
                 i++;
         }
     }
+    /*
+    public String comprovaGuanyador(){
+        int puntuacioMesAlta = 0;
+        String nomGuanyador = "";
+        for(int j = 0; j < nJugadors; j++){
+            if(jugadors[j].getPuntiacio() > puntuacioMesAlta)
+                nomGuanyador = jugadors[j].getNomJugador();
+        }
+        return nomGuanyador;
+    }*/
+
 
     public Boolean comprovaEstatPartida() { //nomes es cridara si escullim l opcio introduir lletra --> comprova que la paraula s'hagi completat al introduir una lletra.
         boolean partidaFinalitzada = false;
@@ -256,8 +281,8 @@ public class Ahorcado implements Serializable{
             }
 
             if (paraulaNoCompleta == false){
+                aumentaPuntuacioParaulaCorrecta();
                 vista.guanyador(torn);
-
                 partidaFinalitzada = true;
             }
             return partidaFinalitzada;
@@ -271,22 +296,8 @@ public class Ahorcado implements Serializable{
             torn = 1;
     }
 
-    public int escullOpcio() {
+    public int realitzaOpcioParaulaLletra(String opcio) {
         Scanner inputUser = new Scanner(System.in);
-
-        //Controlem que l'opció sigui corrcta
-        String opcio;
-        boolean sortir = false;
-        do {
-            //Demanem una de les dues opcions que té l'usuari
-            vista.missatgeEscullOpcio();
-            opcio = inputUser.next();
-            if (opcio.equals("1") || opcio.equals("2"))
-                sortir = true;
-            else
-                vista.errorIntroduccoOpcio();
-        } while (!sortir);
-
         if (opcio.equals("1") ) {
             vista.missatgeIntrodueixLletra();
             char letra = inputUser.next().charAt(0);
@@ -302,6 +313,31 @@ public class Ahorcado implements Serializable{
             return 0;
         }
         return -1;
+    }
+
+
+    public int escullOpcio(String opcio) {
+        vista.tornDe(torn);
+        //Controlem que l'opció sigui corrcta
+        boolean sortir = false;
+        do {
+            //Demanem una de les dues opcions que té l'usuari
+            if (opcio.equals("1") || opcio.equals("2")) {
+                realitzaOpcioParaulaLletra(opcio);
+                sortir = true;
+            }
+            else {
+                vista.errorIntroduccoOpcio();
+                vista.missatgeEscullOpcio();
+            }
+        } while (!sortir);
+        return 1;
+    }
+
+
+
+    public void guardarPartida() {
+
     }
 }
 
