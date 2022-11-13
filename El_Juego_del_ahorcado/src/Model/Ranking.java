@@ -6,23 +6,30 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Ranking {
-    private ArrayList<Jugador> jugadors;
+    private Jugador[] jugadors = null;
     public Dibuixar vista;
+
+    public void setJugadors(Jugador[] jugadors) { this.jugadors = jugadors; }
 
     public  Ranking() {
         vista = new Dibuixar();
     }
 
-    public int CarregaPartidaONovaPartida() {
+
+    public void mostraRanking(){
+        vista.mostraRanking(jugadors);
+    }
+
+    public String CarregaPartidaONovaPartida() {
         vista.misstageCarregaPartidaONovaPartida();
         Scanner inputUser = new Scanner(System.in);
 
-        int opcio;
+        String opcio;
         boolean sortir = false;
         do {
             //Demanem una de les dues opcions que té l'usuari
-            opcio = inputUser.nextInt();
-            if (opcio != 1 || opcio != 2)
+            opcio = inputUser.next();
+            if (opcio.equals("1") || opcio.equals("2"))
                 sortir = true;
             else
                 vista.errorIntroduccoOpcio();
@@ -55,5 +62,7 @@ public class Ranking {
 
         return objecte;
     }
+
+
 
 }

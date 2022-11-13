@@ -1,4 +1,5 @@
 import Controlador.Ahorcado;
+import Model.Ranking;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -15,7 +16,7 @@ public class AhorcadoTest {
         assertArrayEquals(lletresEsperades, resultat);
     }
 
-    //Testeja que s'inicilitzin correctaments els espais buits a l'hora de seleccionar la dificultat
+    //Testeja que s'inicilitzin correctament els espais buits a l'hora de seleccionar la dificultat
     @Test
     public void testGenerarEspaisParaulaMisteriosa() {
         //Test de inicialització amb dificultat fàcil (5 lletres) //Valor limit inferior
@@ -82,13 +83,13 @@ public class AhorcadoTest {
         //Dificultat 2 (intermig, dreta inferior, esquerra superior )
         Ahorcado mida7 = new Ahorcado(1,2);
         resultatEsperat = 7;
-        resultatObtingut = mida5.getMidaParaulaMisteriosa();
+        resultatObtingut = mida7.getMidaParaulaMisteriosa();
         assertEquals(resultatEsperat, resultatObtingut);
 
         //Dificultat 3 (frontera superior)
         Ahorcado mida10 = new Ahorcado(1,3);
         resultatEsperat = 10;
-        resultatObtingut = mida5.getMidaParaulaMisteriosa();
+        resultatObtingut = mida10.getMidaParaulaMisteriosa();
         assertEquals(resultatEsperat, resultatObtingut);
     }
 
@@ -386,9 +387,6 @@ public class AhorcadoTest {
         char[] resultatObtingutParaulavi = vi.getEspaisDesxifratsArrayChar();
         assertEquals(resultatEsperat, resultatObtingut);
         assertArrayEquals(resultatEsperatParaulavi,resultatObtingutParaulavi);
-
-
-
     }
 
     //crear MOCK OBJECT de comprovaEstatPartida()!!
@@ -399,6 +397,7 @@ public class AhorcadoTest {
         boolean resultatEsperat = true;
         boolean resultatObtingut = false;
         Ahorcado a = new Ahorcado(1,1);
+        a.assignaTornJugador();
         a.assignarParaulaMisteriosa("CABRA");
         resultatObtingut = a.introduirParaula("CABRA");
         assertEquals(resultatEsperat, resultatObtingut);
@@ -407,6 +406,7 @@ public class AhorcadoTest {
         boolean resultatEsperatIn = false;
         boolean resultatObtingutIn = false;
         Ahorcado b = new Ahorcado(1,1);
+        b.assignaTornJugador();
         b.assignarParaulaMisteriosa("CABRA");
         resultatObtingut = b.introduirParaula("MOBIL");
         assertEquals(resultatEsperatIn, resultatObtingutIn);
@@ -415,6 +415,7 @@ public class AhorcadoTest {
         boolean resultatEsperatCurt = false;
         boolean resultatObtingutCurt = false;
         Ahorcado c = new Ahorcado(1,1);
+        c.assignaTornJugador();
         c.assignarParaulaMisteriosa("PATOS");
         resultatObtingut = c.introduirParaula("NO");
         assertEquals(resultatEsperatCurt, resultatObtingutCurt);
@@ -424,6 +425,7 @@ public class AhorcadoTest {
         boolean resultatEsperatLlarg = false;
         boolean resultatObtingutLlarg = false;
         Ahorcado d = new Ahorcado(1,1);
+        d.assignaTornJugador();
         d.assignarParaulaMisteriosa("ABRIR");
         resultatObtingut = d.introduirParaula("TECLADOS");
         assertEquals(resultatEsperatLlarg, resultatObtingutLlarg);
@@ -432,6 +434,7 @@ public class AhorcadoTest {
         boolean resultatEsperatMin = false;
         boolean resultatObtingutMin = false;
         Ahorcado e = new Ahorcado(1,1);
+        e.assignaTornJugador();
         e.assignarParaulaMisteriosa("TECLADO");
         resultatObtingut = e.introduirParaula("teclado");
         assertEquals(resultatEsperatMin, resultatObtingutMin);
@@ -462,7 +465,6 @@ public class AhorcadoTest {
 
     @Test
     public void TestComprovaLletraCorrecta(){
-
         //Condition coverage:
         // (true && false)
         Ahorcado a = new Ahorcado(1,1);
@@ -494,10 +496,6 @@ public class AhorcadoTest {
         resultatObtingutD = a.comprovaLletraCorrecta('A');
         assertEquals(resultatEsperatD, resultatObtingutD);
     }
-
-
-
-
 
     @Test
     public void testComprovaEstatPartida(){
@@ -538,35 +536,120 @@ public class AhorcadoTest {
         assertEquals(resultatEsperat3, resultatObtingut3);
     }
 
+    @Test
+    public void testEliminaLletraDisponible(){
+        //eliminacio Correcte:
+        char[] resultEsperat = {'0','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+        Ahorcado a1 = new Ahorcado(1,1);
+        a1.assignaTornJugador();
+        a1.assignarParaulaMisteriosa("GORDA");
+        a1.setVidesDisponibles(3);
+        a1.introduirLletra('A');
+        assertArrayEquals(a1.getLLetresDisponibles(), resultEsperat);
 
-    @Test //INCOMPLETA!!!
-    public void comprovaLletra(){ //CREAR UN MOCKOBJECT
-        //Test comprovar que ens passen una lletra i no un altre caracter:
-        Ahorcado paraulaMisteriosa = new Ahorcado(1,1);
+        //eliminacio Incorrecte:
+        int resultEsperat2 =-1;
+        Ahorcado a2 = new Ahorcado(1,1);
+        a2.assignaTornJugador();
+        a2.assignarParaulaMisteriosa("GORDA");
+        a2.setVidesDisponibles(3);
+        int resultatObtingut2 = a2.introduirLletra('a');
+        assertEquals(resultEsperat2, resultatObtingut2);
 
-        char testChar = 'c';
-        int resultatEsperat1 = 0;
+        //eliminacio Repetida:
+        int  resultEsperat3 = -1;
+        Ahorcado a3 = new Ahorcado(1,1);
+        a3.assignaTornJugador();
+        a3.assignarParaulaMisteriosa("GORDA");
+        a3.setVidesDisponibles(3);
+        a3.introduirLletra('A');
+        int resultat = a3.introduirLletra('A');
+        assertEquals(resultEsperat3, resultat);
+    }
 
-        char tesIntegerChar = '2';
-        int resultatEsperat2 = -1;
+    @Test
+    public void testCanviarTorn() {
+        int resultatEsperat = 0;
+        int resultatObtingut = 0;
 
-        int valorRealCorrecte1 =  paraulaMisteriosa.introduirLletra(testChar);
-        int calorRealIncorrecte2 =  paraulaMisteriosa.introduirLletra(tesIntegerChar);
+        //Canvi torn amb 1 jugador (Frontera inferior)
+        Ahorcado ct1 = new Ahorcado(1,1);
+        ct1.canviarTorn();
+        resultatEsperat = 1;
+        resultatObtingut = ct1.getTorn();
+        assertEquals(resultatEsperat, resultatObtingut);
 
-        assertEquals(resultatEsperat1, valorRealCorrecte1);
-        assertEquals(resultatEsperat2, calorRealIncorrecte2);
+        //Canvi torn 4 jugadors (Frontera superior)
+        Ahorcado ct4 = new Ahorcado(4,1);
+        ct4.canviarTorn();
+        ct4.canviarTorn();
+        ct4.canviarTorn();
+        resultatEsperat = 4;
+        resultatObtingut = ct4.getTorn();
+        assertEquals(resultatEsperat, resultatObtingut);
 
-        /*97-122*/
-        /*assert(type(a) == int)
-        assert(type(b) == int)*/
-    };
+        ct4.canviarTorn();
+        resultatEsperat = 1;
+        resultatObtingut = ct1.getTorn();
+        assertEquals(resultatEsperat, resultatObtingut);
+    }
 
 
+    @Test
+    public void testSetFiPartida(){
+        Ahorcado c = new Ahorcado(1,1);
+        c.setFiPartida(true);
+        boolean resultEsperat = true;
+        boolean resultObtingut = c.getFipartida();
+        assertEquals(resultEsperat, resultObtingut);
+    }
+
+    @Test
+    public void testSetNomJugador() {
+        Ahorcado n = new Ahorcado(1,1);
+        n.assignaTornJugador();
+        n.setNomJugador("PACO", 0);
+        String restultatEsperat = "PACO";
+        String resultatObtingut = n.getNomJugador(0);
+        assertEquals(restultatEsperat, resultatObtingut);
+
+    }
+
+    @Test
+    public void testGetEspaisDesxifrats() {
+        Ahorcado n = new Ahorcado(1,1);
+        String resultatEsperat = "_____";
+        String resultatObtingut = n.getEspaisDesxifrats();
+        assertEquals(resultatEsperat,resultatObtingut);
+    }
 
 
+    @Test
+    public void testGetJugadors(){
+        //1 jugador:
+        Ahorcado n = new Ahorcado(1,1);
+        n.assignaTornJugador();
+        n.setNomJugador("PEPE", 0);
+        String valorEsperat = "PEPE";
+        String valorObtingut = n.getJugadors()[0].getNomJugador();
+        assertEquals(valorEsperat, valorObtingut);
 
-
-
+        //4 jugadors
+        Ahorcado n4 = new Ahorcado(4,1);
+        n4.assignaTornJugador();
+        n4.setNomJugador("ALEX", 0);
+        n4.setNomJugador("PACA", 1);
+        n4.setNomJugador("ZULEMA", 2);
+        n4.setNomJugador("SANTIAGO", 3);
+        String resultatObtingut1 = n4.getJugadors()[0].getNomJugador();
+        String resultatObtingut2 = n4.getJugadors()[1].getNomJugador();
+        String resultatObtingut3 = n4.getJugadors()[2].getNomJugador();
+        String resultatObtingut4 = n4.getJugadors()[3].getNomJugador();
+        assertEquals("ALEX", resultatObtingut1);
+        assertEquals("PACA", resultatObtingut2);
+        assertEquals("ZULEMA", resultatObtingut3);
+        assertEquals("SANTIAGO", resultatObtingut4);
+    }
             //vista controlador TDD caixa negra Caixa blanca Coverage(decision i condicion) 1 mock object
 }
 

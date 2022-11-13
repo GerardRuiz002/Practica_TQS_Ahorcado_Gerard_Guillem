@@ -15,14 +15,15 @@ public class ParaulesDisponibles {
             this.paraulesDisponibles = llegirTxt("src/Text/normal.txt");
         else if (dificultat == 3)
             this.paraulesDisponibles = llegirTxt("src/Text/dificil.txt");
+    }
 
+    public String getParaulaMisteriosa() {
         //Seleccionem una paraula misteriosa random
         Random rand = new Random();
         int randomIndex = rand.nextInt(this.paraulesDisponibles.size());
         this.paraulaMisteriosa = paraulesDisponibles.get(randomIndex);
+        return paraulaMisteriosa;
     }
-
-    public String getParaulaMisteriosa() { return paraulaMisteriosa; }
 
     public ArrayList<String> llegirTxt(String textFilePath) throws IOException {
         ArrayList<String> paraulesLlegides = new ArrayList<>();

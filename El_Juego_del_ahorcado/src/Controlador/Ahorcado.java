@@ -79,12 +79,14 @@ public class Ahorcado implements Serializable{
     public int getMidaParaulaMisteriosa() { return this.midaParaulaMisteriosa; }
     public String getParaulaMisteriosa() { return  this.paraulaMisteriosa; }
     public int getTornJugadorN(int n) { return this.jugadors[n].getTornAssignat(); }
-
+    public String getNomJugador(int n) { return this.jugadors[n].getNomJugador(); }
+    public Jugador[] getJugadors()  { return this.jugadors; }
 
     //Setters:
     public void setVidesDisponibles(int vides) {this.videsDisponibles = vides;}
     public void setEspaisDesxifrats(char espaisDesxifrats[]) {this.espaisDesxifrats = espaisDesxifrats;}
     public void setNomJugador(String nom, int index) { this.jugadors[index].setNomJugador(nom); }
+    public void setFiPartida(boolean fi) {this.fiPartida = fi;}
 
 
     //Inicialitza les lletres disponibles a escollir (amb l'abecedari sense ñ)
@@ -173,6 +175,7 @@ public class Ahorcado implements Serializable{
             aumentaPuntuacioParaulaCorrecta();
             vista.guanyador(torn);
             paraulaEncertada = true;
+            fiPartida = true;
             return paraulaEncertada;
         }
         else {
@@ -182,7 +185,6 @@ public class Ahorcado implements Serializable{
         }
     }
 
-
     public void aumentaPuntuacioParaulaCorrecta(){
         jugadors[torn-1].setPuntuacio(jugadors[torn-1].getPuntiacio()+1); //sumem 2 punts per haver encertat la paraula misteriosa
     }
@@ -191,7 +193,7 @@ public class Ahorcado implements Serializable{
         boolean caracterNoUtilitzat = comprovaCaracterNoUtilitzat(lletra);
 
         //Comprova el ASCII
-        if (comprovaLletraCorrecta(lletra)) {
+        if (comprovaLletraCorrecta(lletra) && (caracterNoUtilitzat == true)) {
             int i = 0;
             boolean trobada = false;
             while (!trobada && i < paraulaMisteriosa.length()) {
@@ -218,11 +220,13 @@ public class Ahorcado implements Serializable{
 
         } else {
             //Cridem els dos tipus d'errors que pot haver-hi al introduir un caràcter
-            if (caracterNoUtilitzat == false)
-                vista.errorLletraUtilitzada();
-
             if (comprovaLletraCorrecta(lletra) == false)
                 vista.errorCaracterNoValid();
+            else if(caracterNoUtilitzat == false)
+                vista.errorLletraUtilitzada();
+
+            /*if (caracterNoUtilitzat == false)
+                vista.errorLletraUtilitzada();*/
 
             videsDisponibles -= 1;
             return -1;
@@ -252,17 +256,6 @@ public class Ahorcado implements Serializable{
                 i++;
         }
     }
-    /*
-    public String comprovaGuanyador(){
-        int puntuacioMesAlta = 0;
-        String nomGuanyador = "";
-        for(int j = 0; j < nJugadors; j++){
-            if(jugadors[j].getPuntiacio() > puntuacioMesAlta)
-                nomGuanyador = jugadors[j].getNomJugador();
-        }
-        return nomGuanyador;
-    }*/
-
 
     public Boolean comprovaEstatPartida() { //nomes es cridara si escullim l opcio introduir lletra --> comprova que la paraula s'hagi completat al introduir una lletra.
         boolean partidaFinalitzada = false;
@@ -283,6 +276,7 @@ public class Ahorcado implements Serializable{
             if (paraulaNoCompleta == false){
                 aumentaPuntuacioParaulaCorrecta();
                 vista.guanyador(torn);
+                fiPartida = true;
                 partidaFinalitzada = true;
             }
             return partidaFinalitzada;
@@ -296,48 +290,5 @@ public class Ahorcado implements Serializable{
             torn = 1;
     }
 
-    public int realitzaOpcioParaulaLletra(String opcio) {
-        Scanner inputUser = new Scanner(System.in);
-        if (opcio.equals("1") ) {
-            vista.missatgeIntrodueixLletra();
-            char letra = inputUser.next().charAt(0);
-            this.introduirLletra(letra);
-            fiPartida = this.comprovaEstatPartida();
-            return 0;
-        } else if (opcio.equals("2")) {
-            vista.missatgeIntrodueixParaula();
-            String paraula = inputUser.next();
-
-            //Comprovem que la paraula introduida sigui la correcta, en el cas de ser correcta, es finalitza la partida
-            fiPartida = this.introduirParaula(paraula);
-            return 0;
-        }
-        return -1;
-    }
-
-
-    public int escullOpcio(String opcio) {
-        vista.tornDe(torn);
-        //Controlem que l'opció sigui corrcta
-        boolean sortir = false;
-        do {
-            //Demanem una de les dues opcions que té l'usuari
-            if (opcio.equals("1") || opcio.equals("2")) {
-                realitzaOpcioParaulaLletra(opcio);
-                sortir = true;
-            }
-            else {
-                vista.errorIntroduccoOpcio();
-                vista.missatgeEscullOpcio();
-            }
-        } while (!sortir);
-        return 1;
-    }
-
-
-
-    public void guardarPartida() {
-
-    }
 }
 
