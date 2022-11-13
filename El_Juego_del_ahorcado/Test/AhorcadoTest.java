@@ -1,6 +1,9 @@
 import Controlador.Ahorcado;
+import Model.MockParaulesDisponibles;
 import Model.Ranking;
 import org.junit.Test;
+
+import java.io.IOException;
 
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
@@ -163,6 +166,25 @@ public class AhorcadoTest {
     }
 
     @Test
+    public void testAssignaParaulaMisteriosaMock() throws IOException {
+        MockParaulesDisponibles mock = new MockParaulesDisponibles(1);
+        int resultatEsperat = 0;
+        int resultatObtingut = 0;
+        String paraula = null;
+        String paraulaEsperada = null;
+
+        //Paraula correcta 1
+        Ahorcado pc1 = new Ahorcado(1,1);
+        paraula = mock.getParaulaMisteriosa();
+        paraulaEsperada = "CASAS";
+        resultatEsperat = 0;
+        resultatObtingut = pc1.assignarParaulaMisteriosa(paraula);
+        assertEquals(resultatEsperat, resultatObtingut);
+        assertEquals(paraulaEsperada, pc1.getParaulaMisteriosa());
+    }
+
+
+    @Test
     public void testAssignarTornJugador() {
         int tornJugador1Esperat = 0;
         int tornJugador2Esperat = 0;
@@ -263,6 +285,56 @@ public class AhorcadoTest {
         assertEquals(resultatEsperat,resultatObtingut);
 
         assertArrayEquals(null, ici.getParaulaMisteriosaArray());
+    }
+
+    @Test
+    public void testIntroduirParaula(){
+        //paraula correcte:
+        boolean resultatEsperat = true;
+        boolean resultatObtingut = false;
+        Ahorcado a = new Ahorcado(1,1);
+        a.assignaTornJugador();
+        a.assignarParaulaMisteriosa("CABRA");
+        resultatObtingut = a.introduirParaula("CABRA");
+        assertEquals(resultatEsperat, resultatObtingut);
+
+        //paraula incorrecte:
+        boolean resultatEsperatIn = false;
+        boolean resultatObtingutIn = false;
+        Ahorcado b = new Ahorcado(1,1);
+        b.assignaTornJugador();
+        b.assignarParaulaMisteriosa("CABRA");
+        resultatObtingut = b.introduirParaula("MOBIL");
+        assertEquals(resultatEsperatIn, resultatObtingutIn);
+
+        //paraula mes curta:
+        boolean resultatEsperatCurt = false;
+        boolean resultatObtingutCurt = false;
+        Ahorcado c = new Ahorcado(1,1);
+        c.assignaTornJugador();
+        c.assignarParaulaMisteriosa("PATOS");
+        resultatObtingut = c.introduirParaula("NO");
+        assertEquals(resultatEsperatCurt, resultatObtingutCurt);
+
+
+        //paraula mes llarga:
+        boolean resultatEsperatLlarg = false;
+        boolean resultatObtingutLlarg = false;
+        Ahorcado d = new Ahorcado(1,1);
+        d.assignaTornJugador();
+        d.assignarParaulaMisteriosa("ABRIR");
+        resultatObtingut = d.introduirParaula("TECLADOS");
+        assertEquals(resultatEsperatLlarg, resultatObtingutLlarg);
+
+        //paraula minuscules
+        boolean resultatEsperatMin = false;
+        boolean resultatObtingutMin = false;
+        Ahorcado e = new Ahorcado(1,1);
+        e.assignaTornJugador();
+        e.assignarParaulaMisteriosa("TECLADO");
+        resultatObtingut = e.introduirParaula("teclado");
+        assertEquals(resultatEsperatMin, resultatObtingutMin);
+
     }
 
     //Limits i frontera
@@ -389,58 +461,6 @@ public class AhorcadoTest {
         assertArrayEquals(resultatEsperatParaulavi,resultatObtingutParaulavi);
     }
 
-    //crear MOCK OBJECT de comprovaEstatPartida()!!
-
-    @Test
-    public void testIntroduirParaula(){
-        //paraula correcte:
-        boolean resultatEsperat = true;
-        boolean resultatObtingut = false;
-        Ahorcado a = new Ahorcado(1,1);
-        a.assignaTornJugador();
-        a.assignarParaulaMisteriosa("CABRA");
-        resultatObtingut = a.introduirParaula("CABRA");
-        assertEquals(resultatEsperat, resultatObtingut);
-
-        //paraula incorrecte:
-        boolean resultatEsperatIn = false;
-        boolean resultatObtingutIn = false;
-        Ahorcado b = new Ahorcado(1,1);
-        b.assignaTornJugador();
-        b.assignarParaulaMisteriosa("CABRA");
-        resultatObtingut = b.introduirParaula("MOBIL");
-        assertEquals(resultatEsperatIn, resultatObtingutIn);
-
-        //paraula mes curta:
-        boolean resultatEsperatCurt = false;
-        boolean resultatObtingutCurt = false;
-        Ahorcado c = new Ahorcado(1,1);
-        c.assignaTornJugador();
-        c.assignarParaulaMisteriosa("PATOS");
-        resultatObtingut = c.introduirParaula("NO");
-        assertEquals(resultatEsperatCurt, resultatObtingutCurt);
-
-
-        //paraula mes llarga:
-        boolean resultatEsperatLlarg = false;
-        boolean resultatObtingutLlarg = false;
-        Ahorcado d = new Ahorcado(1,1);
-        d.assignaTornJugador();
-        d.assignarParaulaMisteriosa("ABRIR");
-        resultatObtingut = d.introduirParaula("TECLADOS");
-        assertEquals(resultatEsperatLlarg, resultatObtingutLlarg);
-
-        //paraula minuscules
-        boolean resultatEsperatMin = false;
-        boolean resultatObtingutMin = false;
-        Ahorcado e = new Ahorcado(1,1);
-        e.assignaTornJugador();
-        e.assignarParaulaMisteriosa("TECLADO");
-        resultatObtingut = e.introduirParaula("teclado");
-        assertEquals(resultatEsperatMin, resultatObtingutMin);
-
-    }
-
     @Test
     public void testComprovaCaracterNoUtilitzat(){
         //caracter es troba en lletres disponibles
@@ -460,41 +480,6 @@ public class AhorcadoTest {
         a.introduirLletra('A');
         resultatObtingutB = a.comprovaCaracterNoUtilitzat('A');
         assertEquals(resultatEsperatB,resultatObtingutB);
-    }
-
-
-    @Test
-    public void TestComprovaLletraCorrecta(){
-        //Condition coverage:
-        // (true && false)
-        Ahorcado a = new Ahorcado(1,1);
-        boolean resultatEsperat = false;
-        boolean resultatObtingut = false;
-        resultatObtingut = a.comprovaLletraCorrecta('h');
-        assertEquals(resultatEsperat, resultatObtingut);
-
-        //(false && true)
-        Ahorcado b = new Ahorcado(1,1);
-        boolean resultatEsperatB = false;
-        boolean resultatObtingutB = false;
-        resultatObtingutB = a.comprovaLletraCorrecta('3');
-        assertEquals(resultatEsperatB, resultatObtingutB);
-
-
-        //Decition Coverage
-        // (false):
-        Ahorcado c = new Ahorcado(1,1);
-        boolean resultatEsperatC = false;
-        boolean resultatObtingutC = false;
-        resultatObtingutC = a.comprovaLletraCorrecta('2');
-        assertEquals(resultatEsperatC, resultatObtingutC);
-
-        //(true):
-        Ahorcado d = new Ahorcado(1,1);
-        boolean resultatEsperatD = true;
-        boolean resultatObtingutD = false;
-        resultatObtingutD = a.comprovaLletraCorrecta('A');
-        assertEquals(resultatEsperatD, resultatObtingutD);
     }
 
     @Test

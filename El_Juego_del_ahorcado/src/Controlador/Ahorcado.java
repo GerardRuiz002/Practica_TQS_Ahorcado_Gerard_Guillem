@@ -289,6 +289,5 @@ public class Ahorcado implements Serializable{
         else
             torn = 1;
     }
-
 }
 
