@@ -105,17 +105,23 @@ public class Main {
 
                     //Demanem una de les dues opcions que té l'usuari
                     if (opcio.equals("1") || opcio.equals("2")) {
-                        if (opcio.equals("1")) {
+                        if (opcio.equals("1")) { //introduir lletra
                             vista.missatgeIntrodueixLletra();
                             char letra = inputUser.next().charAt(0);
                             ahorcado.introduirLletra(letra);
+                            ahorcado.setFiPartida(ahorcado.comprovaEstatPartida()); //controlem si s han emplenat totes les lletres despres d'introduir-ne una.
                         }
-                        else if (opcio.equals("2")){
+                        else if (opcio.equals("2")){ //introduir paraula
                             vista.missatgeIntrodueixParaula();
                             String paraula = inputUser.next();
 
+                            if(ahorcado.getVidesDisponibles() == 0) {
+                                vista.perdedor();
+                                ahorcado.setFiPartida(true);
+                            }
+
                             //Comprovem que la paraula introduida sigui la correcta, en el cas de ser correcta, es finalitza la partida
-                            ahorcado.introduirParaula(paraula);
+                            ahorcado.setFiPartida(ahorcado.introduirParaula(paraula));
                         }
                         sortir = true;
                     }

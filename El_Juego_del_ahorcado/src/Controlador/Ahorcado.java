@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ahorcado implements Serializable{
-    public boolean errorCreation; //Serà true en el cas de que s'hagi introduït malament la dificultat i el numero de jugadors
+    public boolean errorCreation; //Serà true en el cas que s'hagi introduït malament la dificultat o el numero de jugadors
     private Dibuixar vista = new Dibuixar();
     private int videsDisponibles;
 
@@ -101,6 +101,7 @@ public class Ahorcado implements Serializable{
             espaisDesxifrats[i] = '_';
     }
 
+    //Escull la mida segons la dificultat escollida.
     public void generarMidaParaulaMisteriosa(int dificultat){
         if (dificultat == 1)
             midaParaulaMisteriosa = 5;
@@ -110,6 +111,7 @@ public class Ahorcado implements Serializable{
             midaParaulaMisteriosa = 10;
     }
 
+    //generem vides segons la dificultat de la partida
     public void generarVidesPartida(int dificultat) {
         if (dificultat == 1 )
             videsDisponibles = 8;
@@ -144,6 +146,7 @@ public class Ahorcado implements Serializable{
         }
     }
 
+    //assigna els torns de cada jugador en la partida
     public void assignaTornJugador() {
         for (int i = 0; i < nJugadors; i++) {
             jugadors[i] = new Jugador(i); //la i es la id que tindrà el jugador
@@ -159,6 +162,7 @@ public class Ahorcado implements Serializable{
             return false;
     }
 
+    //comprova si el caràcter introduit ha estat usat anteriorment
     public boolean comprovaCaracterNoUtilitzat(char caracter) {
         boolean caracterNoUtilitzat = false;
         for (int i = 0; i < lletresDisponibles.length; i++) {
@@ -169,6 +173,7 @@ public class Ahorcado implements Serializable{
         return caracterNoUtilitzat;
     }
 
+    //permet introduir una paraula com a posible solucio
     public boolean introduirParaula(String paraula) {
         boolean paraulaEncertada = false;
         if (paraula.equals(paraulaMisteriosa)) {
@@ -185,10 +190,12 @@ public class Ahorcado implements Serializable{
         }
     }
 
+    //aumenta puntuacio de jugador al encertar una paraula
     public void aumentaPuntuacioParaulaCorrecta(){
         jugadors[torn-1].setPuntuacio(jugadors[torn-1].getPuntiacio()+1); //sumem 2 punts per haver encertat la paraula misteriosa
     }
 
+    //permet introduir una lletra com a possible solució
     public int introduirLletra(char lletra) {
         boolean caracterNoUtilitzat = comprovaCaracterNoUtilitzat(lletra);
 
@@ -225,9 +232,6 @@ public class Ahorcado implements Serializable{
             else if(caracterNoUtilitzat == false)
                 vista.errorLletraUtilitzada();
 
-            /*if (caracterNoUtilitzat == false)
-                vista.errorLletraUtilitzada();*/
-
             videsDisponibles -= 1;
             return -1;
         }
@@ -257,7 +261,8 @@ public class Ahorcado implements Serializable{
         }
     }
 
-    public Boolean comprovaEstatPartida() { //nomes es cridara si escullim l opcio introduir lletra --> comprova que la paraula s'hagi completat al introduir una lletra.
+    //(nomes en cas d'introduir lletra), comprova si tots els espais estan omplerts o no, com a consequència d'introdui una lletra
+    public Boolean comprovaEstatPartida() { //analitza l estat de la partida
         boolean partidaFinalitzada = false;
         if(videsDisponibles == 0){
             vista.perdedor();
@@ -283,6 +288,7 @@ public class Ahorcado implements Serializable{
         }
     }
 
+    //controla en canvi de torn entre els jugadors de la partida
     public void canviarTorn() {
         if (torn != nJugadors)
             torn += 1;

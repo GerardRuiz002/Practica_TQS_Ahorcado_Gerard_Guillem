@@ -2,15 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d52aad4-6c3d-411b-bfd0-0be4b3622389" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Model/MockParaulesDisponibles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/Practica_TQS_Ahorcado.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/Practica_TQS_Ahorcado.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/bluecatcode_junit_4_10_extended.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/bluecatcode_junit_4_10_extended.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiagramaClasesAhorcado.puml" beforeDir="false" afterPath="$PROJECT_DIR$/DiagramaClasesAhorcado.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado.iml" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/AhorcadoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/AhorcadoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/ParaulesDisponiblesTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/El_Juego_del_ahorcado/Controlador/Ahorcado.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/El_Juego_del_ahorcado/Controlador/Ahorcado.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/El_Juego_del_ahorcado/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/El_Juego_del_ahorcado/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/El_Juego_del_ahorcado/Model/Jugador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/El_Juego_del_ahorcado/Model/Jugador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/El_Juego_del_ahorcado/Model/MockParaulesDisponibles.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/El_Juego_del_ahorcado/Model/MockParaulesDisponibles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/El_Juego_del_ahorcado/Model/ParaulesDisponibles.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/El_Juego_del_ahorcado/Model/ParaulesDisponibles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/El_Juego_del_ahorcado/Model/Ranking.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/El_Juego_del_ahorcado/Model/Ranking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/El_Juego_del_ahorcado/Text/dificil.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/El_Juego_del_ahorcado/Text/dificil.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/El_Juego_del_ahorcado/Text/facil.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/El_Juego_del_ahorcado/Text/facil.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/El_Juego_del_ahorcado/Text/normal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/El_Juego_del_ahorcado/Text/normal.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/El_Juego_del_ahorcado/Vista/Dibuixar.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/El_Juego_del_ahorcado/Vista/Dibuixar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/El_Juego_del_ahorcado/AhorcadoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/El_Juego_del_ahorcado/AhorcadoTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controlador/Ahorcado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controlador/Ahorcado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/MockParaulesDisponibles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/MockParaulesDisponibles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/ParaulesDisponibles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ParaulesDisponibles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Ranking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Ranking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Text/dificil.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Text/dificil.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Text/facil.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Text/facil.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Text/normal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Text/normal.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vista/Dibuixar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vista/Dibuixar.java" afterDir="false" />
     </list>
-    <list id="93eb15e3-0422-48c1-965f-ec03f34fd0cd" name="Changes by guill" comment="">
-      <change beforePath="$PROJECT_DIR$/Test/AhorcadoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/AhorcadoTest.java" afterDir="false" />
-    </list>
+    <list id="93eb15e3-0422-48c1-965f-ec03f34fd0cd" name="Changes by guill" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,18 +55,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/Test/AhorcadoTest.java">
-      <ranges>
-        <range start1="1" end1="1" start2="1" end2="2" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
-        <range start1="4" end1="4" start2="5" end2="7" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="164" end1="164" start2="167" end2="186" changelist="93eb15e3-0422-48c1-965f-ec03f34fd0cd" />
-        <range start1="266" end1="267" start2="288" end2="289" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="391" end1="443" start2="413" end2="413" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-        <range start1="463" end1="498" start2="433" end2="433" changelist="2d52aad4-6c3d-411b-bfd0-0be4b3622389" />
-      </ranges>
-    </file>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -48,24 +64,9 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/gerar/Documents/GitHub/Practica_TQS_Ahorcado/El_Juego_del_ahorcado&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -81,7 +82,14 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AhorcadoTest">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="El_Juego_del_ahorcado" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AhorcadoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="El_Juego_del_ahorcado" />
       <option name="PACKAGE_NAME" value="" />
@@ -121,23 +129,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AhorcadoTest.testSetNomJugador" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="El_Juego_del_ahorcado" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AhorcadoTest" />
-      <option name="METHOD_NAME" value="testSetNomJugador" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AhorcadoTest" />
         <item itemvalue="JUnit.AhorcadoTest.testAssignaParaulaMisteriosaMock" />
         <item itemvalue="JUnit.AhorcadoTest.testGetJugadors" />
         <item itemvalue="JUnit.AhorcadoTest.testGetEspaisDesxifrats" />
-        <item itemvalue="JUnit.AhorcadoTest.testSetNomJugador" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +193,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/El_Juego_del_ahorcado$AhorcadoTest.ic" NAME="AhorcadoTest Coverage Results" MODIFIED="1668355307106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/El_Juego_del_ahorcado$AhorcadoTest_testCanviarTorn.ic" NAME="AhorcadoTest.testCanviarTorn Coverage Results" MODIFIED="1668331055239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/El_Juego_del_ahorcado$AhorcadoTest.ic" NAME="AhorcadoTest Coverage Results" MODIFIED="1668463581728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

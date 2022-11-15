@@ -386,6 +386,40 @@ public class AhorcadoTest {
     }
 
     @Test
+    public void TestComprovaLletraCorrectaDecitionCondition(){
+        //Condition coverage:
+        // (true && false)
+        Ahorcado a = new Ahorcado(1,1);
+        boolean resultatEsperat = false;
+        boolean resultatObtingut = false;
+        resultatObtingut = a.comprovaLletraCorrecta('h');
+        assertEquals(resultatEsperat, resultatObtingut);
+
+        //(false && true)
+        Ahorcado b = new Ahorcado(1,1);
+        boolean resultatEsperatB = false;
+        boolean resultatObtingutB = false;
+        resultatObtingutB = a.comprovaLletraCorrecta('3');
+        assertEquals(resultatEsperatB, resultatObtingutB);
+
+
+        //Decition Coverage
+        // (false):
+        Ahorcado c = new Ahorcado(1,1);
+        boolean resultatEsperatC = false;
+        boolean resultatObtingutC = false;
+        resultatObtingutC = a.comprovaLletraCorrecta('2');
+        assertEquals(resultatEsperatC, resultatObtingutC);
+
+        //(true):
+        Ahorcado d = new Ahorcado(1,1);
+        boolean resultatEsperatD = true;
+        boolean resultatObtingutD = false;
+        resultatObtingutD = a.comprovaLletraCorrecta('A');
+        assertEquals(resultatEsperatD, resultatObtingutD);
+    }
+
+    @Test
     public void testIntroduirLletra() {
         int resultatEsperat = 0;
         int resultatObtingut = 0;
@@ -597,7 +631,6 @@ public class AhorcadoTest {
         String restultatEsperat = "PACO";
         String resultatObtingut = n.getNomJugador(0);
         assertEquals(restultatEsperat, resultatObtingut);
-
     }
 
     @Test
@@ -637,19 +670,3 @@ public class AhorcadoTest {
     }
             //vista controlador TDD caixa negra Caixa blanca Coverage(decision i condicion) 1 mock object
 }
-
-
-
-//Valor limit inferior
-
-//Valor esquerra limit inferior
-
-//Valor dreta limit inferior
-
-//Valor limit superior
-
-//Valor limit esquerra superior
-
-//Valor limit dreta superior
-
-//Valor intermig

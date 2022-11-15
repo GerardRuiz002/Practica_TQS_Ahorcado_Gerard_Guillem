@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1fc96ff-2a25-4f0c-b9e4-efb6a92ea7aa" name="Changes" comment="" />
+    <list default="true" id="a1fc96ff-2a25-4f0c-b9e4-efb6a92ea7aa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Practica_TQS_Ahorcado.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Practica_TQS_Ahorcado.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado/.idea/libraries/bluecatcode_junit_4_10_extended.xml" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado/.idea/libraries/bluecatcode_junit_4_10_extended.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado/DiagramaClasesAhorcado.puml" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado/DiagramaClasesAhorcado.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado/El_Juego_del_ahorcado.iml" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado/El_Juego_del_ahorcado.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado/Test/AhorcadoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado/Test/AhorcadoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado/out/production/El_Juego_del_ahorcado/Text/dificil.txt" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado/out/production/El_Juego_del_ahorcado/Text/dificil.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado/out/production/El_Juego_del_ahorcado/Text/facil.txt" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado/out/production/El_Juego_del_ahorcado/Text/facil.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado/out/production/El_Juego_del_ahorcado/Text/normal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado/out/production/El_Juego_del_ahorcado/Text/normal.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado/src/Controlador/Ahorcado.java" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado/src/Controlador/Ahorcado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado/src/Model/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado/src/Model/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado/src/Model/MockParaulesDisponibles.java" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado/src/Model/MockParaulesDisponibles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado/src/Model/ParaulesDisponibles.java" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado/src/Model/ParaulesDisponibles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado/src/Model/Ranking.java" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado/src/Model/Ranking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado/src/Text/dificil.txt" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado/src/Text/dificil.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado/src/Text/facil.txt" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado/src/Text/facil.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado/src/Text/normal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado/src/Text/normal.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/El_Juego_del_ahorcado/src/Vista/Dibuixar.java" beforeDir="false" afterPath="$PROJECT_DIR$/El_Juego_del_ahorcado/src/Vista/Dibuixar.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,15 +53,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultPlantUmlFileTemplate": "UML Sequence",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/gerar/Documents/GitHub/Practica_TQS_Ahorcado/El_Juego_del_ahorcado"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/El_Juego_del_ahorcado" />
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
